@@ -1,0 +1,115 @@
+/* line 6, ../../app/styles/main.scss */
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: brandon-grotesque, sans-serif;
+}
+
+/* line 12, ../../app/styles/main.scss */
+.background-image {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  -webkit-transition: all 3s ease-in, all 3s ease-out;
+  -moz-transition: all 3s ease-in, all 3s ease-out;
+  -o-transition: all 3s ease-in, all 3s ease-out;
+  transition: all 3s ease-in, all 3s ease-out;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 25, ../../app/styles/main.scss */
+.background-image.show {
+  opacity: 0.3;
+}
+/* line 28, ../../app/styles/main.scss */
+.background-image.hide {
+  opacity: 0;
+}
+
+/* line 33, ../../app/styles/main.scss */
+.films-view {
+  width: 100%;
+  margin: 30px 0 0 0;
+  padding: 0px;
+  position: relative;
+}
+/* line 38, ../../app/styles/main.scss */
+.films-view li {
+  position: relative;
+  display: inline-block;
+  margin-left: 2%;
+  top: 0px;
+  z-index: 2;
+  width: 14%;
+  -webkit-transition: all 0.3s ease-in, all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-in, all 0.3s ease-out;
+  -o-transition: all 0.3s ease-in, all 0.3s ease-out;
+  transition: all 0.3s ease-in, all 0.3s ease-out;
+}
+/* line 46, ../../app/styles/main.scss */
+.films-view li .details {
+  display: none;
+}
+/* line 49, ../../app/styles/main.scss */
+.films-view li img {
+  width: 100%;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 54, ../../app/styles/main.scss */
+.films-view li.active img {
+  -webkit-box-shadow: black, 0px, 0px, 6px;
+  -moz-box-shadow: black, 0px, 0px, 6px;
+  box-shadow: black, 0px, 0px, 6px;
+  -moz-box-shadow: 0px 0px 6px black;
+  -webkit-box-shadow: 0px 0px 6px black;
+  box-shadow: 0px 0px 6px black;
+}
+/* line 62, ../../app/styles/main.scss */
+.films-view li.disabled {
+  opacity: 0.5;
+  top: 20px;
+}
+/* line 66, ../../app/styles/main.scss */
+.films-view li.next {
+  position: absolute;
+  top: 0px;
+}
+/* line 70, ../../app/styles/main.scss */
+.films-view li.prev {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+}
+/* line 76, ../../app/styles/main.scss */
+.films-view .close-link {
+  display: none;
+  position: absolute;
+  left: 140px;
+  top: 0;
+}
+/* line 81, ../../app/styles/main.scss */
+.films-view .close-link.show {
+  display: inline-block;
+}
+/* line 86, ../../app/styles/main.scss */
+.films-view .details.show {
+  display: block;
+}
+
+@media screen and (max-width:700px) {
+  /* line 95, ../../app/styles/main.scss */
+  .films-view li {
+    width: 43%;
+  }
+}
