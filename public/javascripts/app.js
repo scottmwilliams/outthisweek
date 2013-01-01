@@ -216,6 +216,7 @@ $(document).ready(function(){
       _.bindAll(this, 'render');
     },
     render:function(){
+      $('.select-item').remove();
       var model = this.model;
       this.template = _.template($('#details-template').html());
       var renderContent = this.template(this.model.toJSON());
@@ -224,6 +225,14 @@ $(document).ready(function(){
     }
   });
 
+
+  //// binding keypress events
+  document.body.addEventListener('keydown', showKeyCode, false);
+
+  function showKeyCode(e) {
+    if(e.keyCode == 39){filmCollectionView.nextFilm();}
+    if(e.keyCode == 37){filmCollectionView.prevFilm();}   
+  }
 
  //// utility functions used across the app
 
@@ -237,7 +246,5 @@ function getReleaseWeek(){
 
   return phasedDate;
 }
-
-
 });
 })(jQuery);
