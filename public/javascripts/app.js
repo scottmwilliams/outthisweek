@@ -202,7 +202,6 @@ $(document).ready(function(){
         // render new Item
         that.addOneToStart(prevItem);
       }
-
     }
   });
 
@@ -227,11 +226,12 @@ $(document).ready(function(){
 
 
   //// binding keypress events
+  console.log(document.body);
   document.body.addEventListener('keydown', showKeyCode, false);
 
   function showKeyCode(e) {
-    if(e.keyCode == 39){filmCollectionView.nextFilm();}
-    if(e.keyCode == 37){filmCollectionView.prevFilm();}   
+    if(e.keyCode === 39){filmCollectionView.nextFilm();}
+    if(e.keyCode === 37){filmCollectionView.prevFilm();}   
   }
 
  //// utility functions used across the app
