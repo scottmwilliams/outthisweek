@@ -4,6 +4,90 @@
 		"selected_items":
 		[
 			[
+				"wid",
+				"width"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"rem",
+				"removeClass"
+			],
+			[
+				"ad",
+				"addClass"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"cur",
+				"currentTarget"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"attr",
+				"attributes"
+			],
+			[
+				"f",
+				"f	font"
+			],
+			[
+				"b",
+				"bdrs"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"mari",
+				"margin"
+			],
+			[
+				"bgc",
+				"bgc	background-color"
+			],
+			[
+				"rend",
+				"render"
+			],
+			[
+				"_",
+				"_bindAll"
+			],
+			[
+				"render",
+				"renderContent"
+			],
+			[
 				"jQ",
 				"jQuery.ajax	jQuery.ajax"
 			],
@@ -38,10 +122,6 @@
 			[
 				"an",
 				"animate"
-			],
-			[
-				"in",
-				"input	Tag"
 			],
 			[
 				"for",
@@ -120,21 +200,13 @@
 	"buffers":
 	[
 		{
-			"contents": "(function($){\n\n\n\n\n\n\n\n$.ajax({\n  url: 'http://api.themoviedb.org/3/movie/44912?api_key=c1a2641a1bdc4fe90e68907afed3e1e5',\n  type: 'GET',\n  dataType: 'jsonp',\n  data: {},\n  complete: function(xhr, textStatus) {\n    //called when complete\n   \n  },\n  success: function(data, textStatus, xhr) {\n    console.log(data);\n  },\n  error: function(xhr, textStatus, errorThrown) {\n    //called when there is an error\n  }\n});\n\n})(jQuery);\n\n",
-			"file": "scripts/app.js",
-			"file_size": 419,
-			"file_write_time": 1355253663000000,
+			"contents": "(function($){\n\n$(document).ready(function(){\n  var mbdConfig\n  , date = getReleaseWeek();\n\n  //////// start of film model/view/collection creation ////////\n\n  //// film model\n  var Film = Backbone.Model.extend({\n      defaults:{\n      active:false\n    }\n  });\n\n  //// film view\n  var FilmView = Backbone.View.extend({\n    tagName:'li',\n    events:{\n      'click a.poster-link': 'viewOpened'\n    },\n    initialize: function(){\n      _.bindAll(this, 'render');\n    },\n    render: function(){\n      var model = this.model;\n      // set the base poster URL in the model\n      model.set({'posterURL': mbdConfig.images.base_url+mbdConfig.images.poster_sizes[3]+(this.model.get('poster_path'))});\n      // set the base backdrop URL\n      model.set({'backgroundURL': mbdConfig.images.base_url+mbdConfig.images.backdrop_sizes[1]+(this.model.get('backdrop_path'))});\n      \n      // run everything through the template and render\n      this.template = _.template($('#film-template').html());\n      var renderContent = this.template(this.model.toJSON());\n      this.$el.html(renderContent);\n\n      return this;\n    },\n    remove: function(){\n      $(this.el).remove();\n    },\n    viewOpened: function(e){\n      filmCollectionView.firstItemSelected = false;\n\n      // reset all views back to disabled\n      $('.films-view li').removeClass('active');\n      films.forEach(function(film){film.set({'active':false})}, this);\n\n      // make the currently item active\n      this.model.set({'active':true});\n      if(this.model.get('active') === true){\n        this.$el.toggleClass('active');\n      }\n      this.$el.removeClass('disabled');\n      \n      // run transitions animation and display details\n      changeBackgroundImg();\n      showDetails(e);\n\n      // create a new details view with the clicked item as the model\n      var detailsView = new DetailsView({model:this.model});\n      detailsView.render();\n\n      function changeBackgroundImg(){\n        var id = $(e.currentTarget).attr('data-id')\n        ,modelClicked = films.get(id)\n        ,theImage = $('img')[1]\n        ,$backgroundImage = $('.background-image')\n        ,$backgroundImageNew\n        ,$backgroundImageOld\n        ,imgUrl;\n\n        $backgroundImage.addClass('old');\n        $backgroundImage.removeClass('new');\n        $('body').append('<div class=\"background-image new\"></div>');\n        $backgroundImageNew = $('.background-image.new');\n        $backgroundImageOld = $('.background-image.old');\n        $backgroundImageNew.css({\n          'background':'url('+modelClicked.attributes.backgroundURL + ') no-repeat'\n        });\n\n        // Waits for the image, when fully loaded background image in\n        $('<img>').attr('src',function(){\n          imgUrl = $backgroundImageNew.css('background-image');\n          imgUrl = imgUrl.substring(4, imgUrl .length-1);\n          return imgUrl;\n        }).load(function(){\n        // image has loaded lets animate\n          $backgroundImageNew.css({'background-size':'cover'});\n          $backgroundImageNew.addClass('show');\n          $backgroundImageOld.addClass('hide');\n        });\n      }\n\n      function showDetails(e){\n        $films = $('.films-view li');\n        $filmsNotActive = $(\".films-view li:not(.active)\");\n\n        // fade all items apart from the old clicked\n        $filmsNotActive.addClass('disabled');\n        e.preventDefault();\n      }\n    }\n  });\n\n\n  var movieCollectionURL = 'json/'+ date +'/movies-collection.json';\n  //// film collections\n  var Films = Backbone.Collection.extend({model:Film, url:movieCollectionURL});\n  var films = new Films();\n\n  //// film collection view\n  var FilmsCollectionView = Backbone.View.extend({\n    firstItemSelected: true,\n    initialize: function(){ \n      _.bindAll(this, 'render');\n      // set collection events\n      this.collection.on('reset', this.render, this);\n \n      // change the first render value so we know if it's already been run\n      // attach next and prev event to targets\n      $('.pager .next').on('click', this.nextFilm);\n      $('.pager .prev').on('click', this.prevFilm);\n    },\n    addOne: function(film){\n      var filmView = new FilmView({model: film});\n      film._viewPointers = filmView;\n      this.$el.append(filmView.render().el); \n      if(this.firstItemSelected === false){\n        if(film.get('active') === true){\n          filmView.$el.addClass('active');\n        }\n        else{\n          filmView.$el.addClass('disabled');\n        }\n      }\n    },\n    addOneToStart: function(film){\n      var filmView = new FilmView({model: film});\n      film._viewPointers = filmView;\n      this.$el.prepend(filmView.render().el);\n\n      if(this.firstItemSelected === false){\n        if(film.get('active') === true){\n        filmView.$el.addClass('active');\n        }\n        else{\n          filmView.$el.addClass('disabled');\n        }\n      }\n    },\n    render: function(){\n      var firstFour = this.collection.first(6);\n      firstFour.forEach(this.addOne, this);\n      return this;\n    },\n    nextFilm: function(e){\n      that = filmCollectionView;\n      var lastItemAttr = $('.films-view li:last .poster-link').attr('data-id');\n      var lastItem = films.get(lastItemAttr);\n      var lastItemIndex = _.indexOf(films.models, lastItem);\n      var nextItem = films.at(lastItemIndex+1);\n\n      if(nextItem != undefined){\n        // remove first item in view\n        $('.films-view li:first').remove();\n        // render new Item\n        that.addOne(nextItem);\n      }\n    },\n    prevFilm: function(){\n      that = filmCollectionView;\n      var firstItemAttr = $('.films-view li:first .poster-link').attr('data-id');\n      var firstItem = films.get(firstItemAttr);\n      var firstItemIndex = _.indexOf(films.models, firstItem);\n      var prevItem = films.at(firstItemIndex-1);\n\n      if(prevItem != undefined){\n        // remove last item in view\n        $('.films-view li:last').remove();\n        // render new Item\n        that.addOneToStart(prevItem);\n      }\n\n    }\n  });\n\n  filmCollectionView = new FilmsCollectionView({collection: films, el: $('.films-view')});\n\n  //// details view\n  DetailsView = Backbone.View.extend({\n    events:{},\n    el:$('.details-view'),\n    initialize: function(){\n      _.bindAll(this, 'render');\n    },\n    render:function(){\n      var model = this.model;\n      this.template = _.template($('#details-template').html());\n      var renderContent = this.template(this.model.toJSON());\n      this.$el.html(renderContent);\n      return this;\n    }\n  });\n\n \n\n  //////// seprate animations for later use on other models/views ////////\n\n  viewTransitions = {} \n\n  //////// get the config film for MDB ////////\n\n\n  var configURL = 'json/'+ date +'/mdbConfig.json' \n\n  $.ajax({\n    url: configURL\n  }).success(function(data){\n    films.fetch();\n    mbdConfig = data;\n  });\n\n\nfunction getReleaseWeek(){\n  var curr = new Date; // get current date\n  var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week\n  var last = first + 6; // last day is the first day + 6\n\n  var firstday = new Date(curr.setDate(first)); // first sunday of the week\n\n  var momentObject = moment(firstday); // date converted to moment.js\n  var phasedDate = momentObject.format(\"D-M-YYYY\"); // format with moment.js\n\n  return phasedDate;\n}\n\n\n});\n})(jQuery);",
+			"file": "/Users/scott/Documents/-Learning/whensItOut_node/public/javascripts/app.js",
+			"file_size": 7286,
+			"file_write_time": 1357061630000000,
 			"settings":
 			{
-				"buffer_size": 426,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/scott/Documents/-Learning/instagrid/app/scripts/scripts.js",
-			"settings":
-			{
-				"buffer_size": 6983,
+				"buffer_size": 7286,
 				"line_ending": "Unix"
 			}
 		}
@@ -142,9 +214,53 @@
 	"build_system": "Packages/AAAPackageDev/Support/JSON to Property List.sublime-build",
 	"command_palette":
 	{
-		"height": 47.0,
+		"height": 375.0,
 		"selected_items":
 		[
+			[
+				"emme",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"emm",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"emmet",
+				"Emmet: Expand Abbreviation"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
 			[
 				"Package Control: insta",
 				"Package Control: Install Package"
@@ -158,14 +274,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"Package Control: ",
-				"Package Control: Enable Package"
-			],
-			[
-				"Package Control: ins",
-				"Package Control: Install Package"
-			],
-			[
 				"set jQ",
 				"Set Syntax: jQuery (JavaScript)"
 			],
@@ -174,7 +282,7 @@
 				"Set Syntax: jQuery (JavaScript)"
 			]
 		],
-		"width": 467.0
+		"width": 462.0
 	},
 	"console":
 	{
@@ -191,7 +299,14 @@
 	},
 	"file_history":
 	[
+		"/Users/scott/Documents/-Learning/whensItOut/app/styles/small-device.sass",
 		"/Users/scott/Documents/-Learning/whensItOut/app/index.html",
+		"/Users/scott/Documents/-Learning/whensItOut/app/styles/main.scss",
+		"/Users/scott/Documents/-Learning/whensItOut/app/scripts/app.js",
+		"/Users/scott/Documents/-Learning/whensItOut/app/scripts/app copy.js",
+		"/Users/scott/Documents/-Learning/whensItOut/app/scripts/loader.js",
+		"/Users/scott/Library/Application Support/Sublime Text 2/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/scott/Documents/-Learning/whensItOut/app/styles/main.css",
 		"/Users/scott/Documents/-Learning/instagrid/app/index.html",
 		"/Users/scott/Documents/-Learning/instagrid/app/scripts/scripts.js",
 		"/Users/scott/Documents/-Learning/deferres/app/scripts/app.js",
@@ -257,6 +372,103 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"isActive",
+			"firstItemSelected",
+			"disab",
+			"firstItemSelected",
+			"firstRender",
+			"viewClosed",
+			"this.f",
+			"console",
+			"false",
+			"this.model.set",
+			"isActive",
+			"console",
+			"        \n",
+			"isActive",
+			"isAct",
+			"active",
+			".off",
+			"films-view",
+			"el",
+			"render",
+			"MODEL",
+			"active",
+			"addOne",
+			"get",
+			"find",
+			"removeOne",
+			"films",
+			"details",
+			"css",
+			"details",
+			"li",
+			"film",
+			"console.log",
+			"viewOpen",
+			".close-link",
+			"call",
+			"currentTarge",
+			"viewOpen",
+			"console.",
+			"console.log",
+			"deleg",
+			"unde",
+			"$el",
+			".on",
+			"close-l",
+			"close-link",
+			"close-",
+			"addCloseBtn",
+			"close-",
+			"close",
+			"data",
+			"films",
+			"attrib",
+			"id ",
+			"border",
+			"$backgroundImageNew",
+			".films-view li",
+			"$('.films-view li')",
+			".each",
+			"config",
+			"offset",
+			"position",
+			"top",
+			">\n",
+			"this.",
+			"console.log",
+			"film",
+			"config",
+			"backdrop",
+			"backdro",
+			"console.log",
+			"console.loh",
+			"forEach",
+			"render",
+			" data-id=\"<%= id %>\" ",
+			"get",
+			"films",
+			"movies/",
+			"movies",
+			"config",
+			"confi",
+			"id",
+			"addone",
+			"Films",
+			"films",
+			"console",
+			"viewActive",
+			"itemPosition",
+			"background",
+			"complete",
+			"counter",
+			"checkFlag",
+			"id",
+			"con",
+			"title",
+			"*/",
+			" this.collection.forEach(this.addOne, this);\n    return this;",
 			"position.top",
 			"makeTheGridEven",
 			"userId",
@@ -287,42 +499,7 @@
 			"car",
 			"carView",
 			"CarsCollectionView",
-			"CarView",
-			"console.",
-			"CarsCollectionView",
-			"CarView",
-			");\n",
-			"CarView",
-			"cars",
-			"Cars",
-			"cars",
-			"Cars",
-			"car",
-			">\n",
-			"();",
-			"bind",
-			"boots",
-			"a",
-			"respon",
-			"							 ",
-			"access",
-			"params",
-			"accessToken",
-			"commentsCount",
-			"comments",
-			"url",
-			"'#instagram'",
-			"setting",
-			"instagram",
-			".each",
-			"url",
-			"ImageCollection",
-			"ImageObj",
-			"queryData",
-			"},\n",
-			"appendTo",
-			"');\n",
-			"f"
+			"CarView"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -330,6 +507,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"active",
+			"firstItemSelected",
+			"removeFirstItem",
+			"mbdConfig",
+			"viewOpened",
+			"itemPosition",
 			"offset.top",
 			""
 		],
@@ -347,18 +530,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "scripts/app.js",
+					"file": "/Users/scott/Documents/-Learning/whensItOut_node/public/javascripts/app.js",
 					"settings":
 					{
-						"buffer_size": 426,
+						"buffer_size": 7286,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15,
-								15
+								3544,
+								3544
 							]
 						],
 						"settings":
@@ -371,37 +554,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/scott/Documents/-Learning/instagrid/app/scripts/scripts.js",
-					"settings":
-					{
-						"buffer_size": 6983,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3562.0,
+						"translation.y": 1425.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -473,6 +626,6 @@
 	"show_open_files": true,
 	"show_tabs": false,
 	"side_bar_visible": true,
-	"side_bar_width": 174.0,
+	"side_bar_width": 154.0,
 	"status_bar_visible": true
 }
