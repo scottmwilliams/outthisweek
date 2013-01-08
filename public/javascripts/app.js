@@ -4,7 +4,7 @@ $(document).ready(function(){
   var mbdConfig
   , date = getReleaseWeek()
   , configURL = 'json/'+ date +'/mdbConfig.json'
-  , movieCollectionURL = 'json/'+ date +'/movies-collection.json';
+  , movieCollectionURL = 'json/'+ date +'/movies.json';
 
   //////// backbone routes ////////
 
@@ -128,7 +128,7 @@ $(document).ready(function(){
 
   //// film collections
   var Films = Backbone.Collection.extend({model:Film, url:movieCollectionURL});
-  var films = new Films();
+  window.films = new Films();
 
   //// film collection view
   var FilmsCollectionView = Backbone.View.extend({
@@ -217,6 +217,7 @@ $(document).ready(function(){
     render:function(){
       $('.select-item').remove();
       var model = this.model;
+      var filmTitle = this.model.get('title');
       this.template = _.template($('#details-template').html());
       var renderContent = this.template(this.model.toJSON());
       this.$el.html(renderContent);
@@ -224,11 +225,8 @@ $(document).ready(function(){
     }
   });
 
-
-  //// binding keypress events
-  console.log(document.body);
   document.body.addEventListener('keydown', showKeyCode, false);
-
+  
   function showKeyCode(e) {
     if(e.keyCode === 39){filmCollectionView.nextFilm();}
     if(e.keyCode === 37){filmCollectionView.prevFilm();}   

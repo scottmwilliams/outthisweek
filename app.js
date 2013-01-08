@@ -8,6 +8,7 @@ var express = require('express')
   , jsdom = require('jsdom')
   , $ = require('jQuery')
   , moment = require('moment')
+  , apikeys = require('apikeys')
   , fs = require('fs');
 
 var app = module.exports = express.createServer();
@@ -42,128 +43,101 @@ app.get('/', function(req, res) {
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
-
+console.log("Make sure you change your api keys in node_modules/apikeys/index.js");
 
 /////////  START OF GETTING RECENT FILMS FROM MDB ////////////
 
-var movieCollection = [];
-var movieCollectionFullDetails = [];
+var tmdbCollection = [];
+var tmdbCollectionFullDetails = [];
 var date = getReleaseWeek();
 var path = 'public/json/'+date;
 var tomatoesRecent;
 
+// Get recently released dvd's from rotten tomatoes
 var tomatoesRequest = $.ajax({
-  url: 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey=dtxq8gh9vybznax2hha3mcqg',
+  url: 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey='+apikeys.rottentomatoes+'&page_limit=20&page=1&country=us',
   type: 'GET',
   dataType: 'jsonp',
   data: {}
 });
 
+// When the request above is finished get additional data from tmdb and youtube
 $.when(tomatoesRequest).done(function(data){
    tomatoesRecent = data;
-    var i = 1;
+    var i = 0;
+    var numberOfFilms = ((tomatoesRecent.movies.length)-1);
     fs.mkdir(path);
     fs.writeFile(path+'/'+'all-movies.json', JSON.stringify(tomatoesRecent.movies, null, 4));
 
-    for(var x in tomatoesRecent.movies){
-      var currentMovie = tomatoesRecent.movies[x].title;
-      // for each item call the getMDBitem function below which builds the film collection
-      getMDBitem(currentMovie);
+      // build a new collection for objects containing additional information such as
+      // trailer URL and poster and backdrop images 
+      additionalInfo(tomatoesRecent.movies[i], tomatoesRecent.movies[i].title);
 
-      function getMDBitem(theMovie){
-        theMovie = cleanTitle(theMovie);
-
-        var filename = path+'/'+theMovie+'.json';
-        var URL = 'http://api.themoviedb.org/3/search/movie?api_key=c1a2641a1bdc4fe90e68907afed3e1e5&query='+theMovie;
-        var ajaxURL = encodeURI(URL);
-        $.ajax({
-          url: ajaxURL,
-          success: function(data, textStatus, xhr) {
-            movieCollection.push(data.results[0]);
-            writeToFile(i);
-            i++;
-            // old line that writes out a file for each movie
-            // fs.writeFile(filename, JSON.stringify(data.results[0], null, 4));
-           
-          }
-        }); // end ajax call
-      } 
-    } // end for in
+      function additionalInfo(movieObj, movieTitle){
+        movieTitle = cleanTitle(movieTitle);
+              if(i < numberOfFilms){            
+                 var filename = path+'/'+movieTitle+'.json';
+                  var URL = 'http://api.themoviedb.org/3/search/movie?api_key='+apikeys.themoviedb+'&query='+movieTitle;
+                  var ajaxURL = encodeURI(URL);
+                  $.ajax({
+                    url: ajaxURL,
+                    success: function(data, textStatus, xhr) {
+                      var movie = data; 
+                      $.ajax({
+                        url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='+movieTitle+'%20Official%20Trailer%20HD&key='+apikeys.google
+                      }).success(function(data){
+                        movieObj.trailer = data.items[0].id.videoId;
+                        movieObj.poster_path = movie.results[0].poster_path;
+                        movieObj.backdrop_path = movie.results[0].backdrop_path;
+                        tmdbCollection.push(movieObj);
+                        console.log(i +' = '+ tomatoesRecent.movies[i].title);
+                        additionalInfo(tomatoesRecent.movies[i], tomatoesRecent.movies[i].title);
+                        i++;
+                      });
+                    }
+                  }); // end ajax call
+              }
+              else{
+                writeToFile();
+              }
+      }
 });
 
-function getMoreDetails(movies){
-  var i = 1;
-  for (var x in movies){
-  	try{
-  		var Movie = movies[x].id;
-  	}
-	catch(err){
-		// sometimes a movie can note be found on themovie database if this is
-		// the case catch the error thrown 
-		console.log('error =',err);
-	}
-    
-    getMDBitemFull(Movie);
+// get conf file for tmdb this is needed to build the full URL from images
+$.ajax({
+  url: 'http://api.themoviedb.org/3/configuration?api_key='+apikeys.themoviedb 
+}).success(function(data){
+  fs.writeFile(path+'/'+'mdbConfig.json', JSON.stringify(data, null, 4));
+});
 
-    function getMDBitemFull(currentMovie){
-      var ajaxURL = 'http://api.themoviedb.org/3/movie/'+currentMovie+'?api_key=c1a2641a1bdc4fe90e68907afed3e1e5';
-      $.ajax({
-          url: ajaxURL,
-          success: function(data, textStatus, xhr) {
-             movieCollectionFullDetails.push(data);
-             if(i == movies.length){
-              // sort the film collection array by popularity
-              movieCollectionFullDetails.sort(function(obj1, obj2){
-                return obj2.popularity - obj1.popularity;
-              });
-              
-              fs.writeFile(path+'/'+'movies-collection.json', JSON.stringify(movieCollectionFullDetails, null, 4));
-             }
-            i++;
-          }
-      }); // end ajax call
-    }  
-  }
+// when all the ajax requests are finished write the new movies collection to disk
+function writeToFile(){
+    fs.writeFile(path+'/'+'movies.json', JSON.stringify(tmdbCollection, null, 4));
 }
 
+
+////// below are utility function used in the code above //////////
+
+
+
+// get the date of the first sunday of each week used to create the file path 
+// for the JSON files
 function getReleaseWeek(){
   var curr = new Date; // get current date
   var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
   var last = first + 6; // last day is the first day + 6
-
   var firstday = new Date(curr.setDate(first)); // first sunday of the week
-
   var momentObject = moment(firstday); // date converted to moment.js
   var phasedDate = momentObject.format("D-M-YYYY"); // format with moment.js
 
   return phasedDate;
 }
 
-
-////// get configeration
-
-$.ajax({
-  url: 'http://api.themoviedb.org/3/configuration?api_key=c1a2641a1bdc4fe90e68907afed3e1e5' 
-}).success(function(data){
-  fs.writeFile(path+'/'+'mdbConfig.json', JSON.stringify(data, null, 4));
-});
-
-////// functions called above
-
-// write the collection to a file
-function writeToFile(b){
-  if(b == tomatoesRecent.movies.length){ 
-
-    getMoreDetails(movieCollection);
-    // write the film collection to a file
-  }
-}
-
 // removes odd charaters in titles
 function cleanTitle(title){
   var symbols = {
     '@': '%40',
-    '&amp;': '%26',
+    '&amp;': 'and',
     '*': '%2A',
     '+': '%2B',
     '/': '%2F',
@@ -171,10 +145,6 @@ function cleanTitle(title){
     '&gt;': '%3E'
   };
   title = title.replace(/([@*+/]|&(amp|lt|gt);)/g, function (m) { return symbols[m]; });
+  title = title.replace('&','and');
   return title;
 }
-
-
-/////////  END OF GETTING RECENT FILMS FROM MDB ////////////
-
-

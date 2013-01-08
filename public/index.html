@@ -17,17 +17,16 @@
         <script src="javascripts/vendor/jquery/jquery.min.js"></script>
         <script src="javascripts/vendor/underscore/underscore-min.js"></script>
         <script src="javascripts/vendor/backbone/backbone-min.js"></script>
-         <script src="javascripts/vendor/moment/moment.js"></script>
+        <script src="javascripts/vendor/moment/moment.js"></script>
         <script src="javascripts/app.js"></script>
-       <!--  <script type="text/javascript" src="//use.typekit.net/epu7yvd.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
     </head>
     <body>
         <script type="text/template" id="details-template">
             <div class="details">
                     <h1><%= title %></h1>
-                    <h2><%= tagline %></h2>
-                    <p><%= overview %></p>
+                     <p>DVD Release: <%= release_dates.dvd %></p>
+                    <p><%= synopsis %></p>
+                     <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/<%= trailer %>" frameborder="0">
             </div>
         </script>
 
@@ -51,6 +50,6 @@
         
        <div class="background-overlay"></div>
 
-
+    
     </body>
 </html>
