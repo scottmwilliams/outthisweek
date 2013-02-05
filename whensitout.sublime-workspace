@@ -204,69 +204,10 @@
 	"buffers":
 	[
 		{
-			"contents": "\n/**\n * Module dependencies.\n */\n\nvar express = require('express')\n  , routes = require('./routes')\n  , jsdom = require('jsdom')\n  , $ = require('jQuery')\n  , moment = require('moment')\n  , fs = require('fs');\n\nvar app = module.exports = express.createServer();\n\n// Configuration\n\napp.configure(function(){\n  app.set('views', __dirname + '/views');\n  app.set('view engine', 'jade');\n  app.use(express.bodyParser());\n  app.use(express.methodOverride());\n  app.use(app.router);\n  app.use(express.static(__dirname + '/public'));\n});\n\napp.configure('development', function(){\n  app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); \n});\n\napp.configure('production', function(){\n  app.use(express.errorHandler()); \n});\n\n// Routes\napp.register('.html', require('jade'));\napp.get('/', function(req, res) {\n    fs.readFile(__dirname + '/public/index.html', 'utf8', function(err, text){\n        res.send(text);\n    });\n});\n\n\napp.listen(3000);\nconsole.log(\"Express server listening on port %d in %s mode\", app.address().port, app.settings.env);\n\n\n/////////  START OF GETTING RECENT FILMS FROM MDB ////////////\n\nvar tmdbCollection = [];\nvar tmdbCollectionFullDetails = [];\nvar date = getReleaseWeek();\nvar path = 'public/json/'+date;\nvar tomatoesRecent;\n\nvar tomatoesRequest = $.ajax({\n  url: 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey=dtxq8gh9vybznax2hha3mcqg',\n  type: 'GET',\n  dataType: 'jsonp',\n  data: {}\n});\n\n$.when(tomatoesRequest).done(function(data){\n   tomatoesRecent = data;\n    var i = 0;\n    var numberOfFilms = ((tomatoesRecent.movies.length)-1);\n    fs.mkdir(path);\n    fs.writeFile(path+'/'+'all-movies.json', JSON.stringify(tomatoesRecent.movies, null, 4));\n\n      // for each item call the getMDBitem function below which builds the film collection\n      getMDBitem(tomatoesRecent.movies[i], tomatoesRecent.movies[i].title);\n\n      function getMDBitem(movieObj, movieTitle){\n        movieTitle = cleanTitle(movieTitle);\n              if(i < numberOfFilms){            \n                 var filename = path+'/'+movieTitle+'.json';\n                  var URL = 'http://api.themoviedb.org/3/search/movie?api_key=c1a2641a1bdc4fe90e68907afed3e1e5&query='+movieTitle;\n                  var ajaxURL = encodeURI(URL);\n                  $.ajax({\n                    url: ajaxURL,\n                    success: function(data, textStatus, xhr) {\n                      var movie = data; \n                      $.ajax({\n                        url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='+movieTitle+'%20Official%20Trailer%20HD&key=AIzaSyAq6x7_2dfd3jH_iBIMzR1-oLFRzFXKMdY' \n                      }).success(function(data){\n                        movieObj.trailer = data.items[0].id.videoId;\n                        movieObj.poster_path = movie.results[0].poster_path;\n                        movieObj.backdrop_path = movie.results[0].backdrop_path;\n                        tmdbCollection.push(movieObj);\n                        console.log(i +' = '+ tomatoesRecent.movies[i].title);\n                        getMDBitem(tomatoesRecent.movies[i], tomatoesRecent.movies[i].title);\n                        i++;\n                      });\n                    }\n                  }); // end ajax call\n              }\n              else{\n                writeToFile();\n              }\n\n      }\n});\n\nfunction getReleaseWeek(){\n  var curr = new Date; // get current date\n  var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week\n  var last = first + 6; // last day is the first day + 6\n\n  var firstday = new Date(curr.setDate(first)); // first sunday of the week\n\n  var momentObject = moment(firstday); // date converted to moment.js\n  var phasedDate = momentObject.format(\"D-M-YYYY\"); // format with moment.js\n\n  return phasedDate;\n}\n\n\n////// get configeration\n\n$.ajax({\n  url: 'http://api.themoviedb.org/3/configuration?api_key=c1a2641a1bdc4fe90e68907afed3e1e5' \n}).success(function(data){\n  fs.writeFile(path+'/'+'mdbConfig.json', JSON.stringify(data, null, 4));\n});\n\n////// functions called above\n\n// write the collection to a file\nfunction writeToFile(){\n    fs.writeFile(path+'/'+'movies.json', JSON.stringify(tmdbCollection, null, 4));\n}\n\n// removes odd charaters in titles\nfunction cleanTitle(title){\n  var symbols = {\n    '@': '%40',\n    '&amp;': 'and',\n    '*': '%2A',\n    '+': '%2B',\n    '/': '%2F',\n    '&lt;': '%3C',\n    '&gt;': '%3E'\n  };\n  title = title.replace(/([@*+/]|&(amp|lt|gt);)/g, function (m) { return symbols[m]; });\n  title = title.replace('&','and');\n  return title;\n}\n\n\n/////////  END OF GETTING RECENT FILMS FROM MDB ////////////\n\n\n",
-			"file": "app.js",
-			"file_size": 4695,
-			"file_write_time": 1357595263000000,
+			"file": "public/stylesheets/main.scss",
 			"settings":
 			{
-				"buffer_size": 4673,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "\n/**\n * Module dependencies.\n */\n\nvar express = require('express')\n  , routes = require('./routes')\n  , jsdom = require('jsdom')\n  , $ = require('jQuery')\n  , moment = require('moment')\n  , fs = require('fs');\n\nvar app = module.exports = express.createServer();\n\n// Configuration\n\napp.configure(function(){\n  app.set('views', __dirname + '/views');\n  app.set('view engine', 'jade');\n  app.use(express.bodyParser());\n  app.use(express.methodOverride());\n  app.use(app.router);\n  app.use(express.static(__dirname + '/public'));\n});\n\napp.configure('development', function(){\n  app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); \n});\n\napp.configure('production', function(){\n  app.use(express.errorHandler()); \n});\n\n// Routes\napp.register('.html', require('jade'));\napp.get('/', function(req, res) {\n    fs.readFile(__dirname + '/public/index.html', 'utf8', function(err, text){\n        res.send(text);\n    });\n});\n\n\napp.listen(3000);\nconsole.log(\"Express server listening on port %d in %s mode\", app.address().port, app.settings.env);\n\n\n/////////  START OF GETTING RECENT FILMS FROM MDB ////////////\n\nvar tmdbCollection = [];\nvar tmdbCollectionFullDetails = [];\nvar date = getReleaseWeek();\nvar path = 'public/json/'+date;\nvar tomatoesRecent;\n\nvar tomatoesRequest = $.ajax({\n  url: 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey=dtxq8gh9vybznax2hha3mcqg',\n  type: 'GET',\n  dataType: 'jsonp',\n  data: {}\n});\n\n$.when(tomatoesRequest).done(function(data){\n   tomatoesRecent = data;\n  \n    var i = 1;\n    fs.mkdir(path);\n    fs.writeFile(path+'/'+'all-movies.json', JSON.stringify(tomatoesRecent.movies, null, 4));\n\n    for(var x in tomatoesRecent.movies){\n      var movie = tomatoesRecent.movies[x];\n      console.log(movie);\n      // for each item call the getMDBitem function below which builds the film collection\n      getMDBitem(movie, movie.title);\n\n      function getMDBitem(movieObj, movieTitle){\n        movieTitle = cleanTitle(movieTitle);\n\n        var filename = path+'/'+movieTitle+'.json';\n        var URL = 'http://api.themoviedb.org/3/search/movie?api_key=c1a2641a1bdc4fe90e68907afed3e1e5&query='+movieTitle;\n        var ajaxURL = encodeURI(URL);\n        $.ajax({\n          url: ajaxURL,\n          success: function(data, textStatus, xhr) {\n            var movie = data; \n            movieObj.poster_path = data.results[0].poster_path;\n            movieObj.backdrop_path = data.results[0].backdrop_path;\n            tmdbCollection.push(movieObj);\n            writeToFile(i);\n            i++;\n            \n            // old line that writes out a file for each movie\n            // fs.writeFile(filename, JSON.stringify(data.results[0], null, 4));\n           \n          }\n        }); // end ajax call\n      } \n    } // end for in\n});\n\nfunction getReleaseWeek(){\n  var curr = new Date; // get current date\n  var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week\n  var last = first + 6; // last day is the first day + 6\n\n  var firstday = new Date(curr.setDate(first)); // first sunday of the week\n\n  var momentObject = moment(firstday); // date converted to moment.js\n  var phasedDate = momentObject.format(\"D-M-YYYY\"); // format with moment.js\n\n  return phasedDate;\n}\n\n\n////// get configeration\n\n$.ajax({\n  url: 'http://api.themoviedb.org/3/configuration?api_key=c1a2641a1bdc4fe90e68907afed3e1e5' \n}).success(function(data){\n  fs.writeFile(path+'/'+'mdbConfig.json', JSON.stringify(data, null, 4));\n});\n\n////// functions called above\n\n// write the collection to a file\nfunction writeToFile(b){\n  if(b == tomatoesRecent.movies.length){ \n    fs.writeFile(path+'/'+'movies.json', JSON.stringify(tmdbCollection, null, 4));\n  }\n}\n\n// removes odd charaters in titles\nfunction cleanTitle(title){\n  var symbols = {\n    '@': '%40',\n    '&amp;': '%26',\n    '*': '%2A',\n    '+': '%2B',\n    '/': '%2F',\n    '&lt;': '%3C',\n    '&gt;': '%3E'\n  };\n  title = title.replace(/([@*+/]|&(amp|lt|gt);)/g, function (m) { return symbols[m]; });\n  return title;\n}\n\n\n/////////  END OF GETTING RECENT FILMS FROM MDB ////////////\n\n\n",
-			"settings":
-			{
-				"buffer_size": 4121,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "\n/**\n * Module dependencies.\n */\n\nvar express = require('express')\n  , routes = require('./routes')\n  , jsdom = require('jsdom')\n  , $ = require('jQuery')\n  , moment = require('moment')\n  , fs = require('fs');\n\nvar app = module.exports = express.createServer();\n\n// Configuration\n\napp.configure(function(){\n  app.set('views', __dirname + '/views');\n  app.set('view engine', 'jade');\n  app.use(express.bodyParser());\n  app.use(express.methodOverride());\n  app.use(app.router);\n  app.use(express.static(__dirname + '/public'));\n});\n\napp.configure('development', function(){\n  app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); \n});\n\napp.configure('production', function(){\n  app.use(express.errorHandler()); \n});\n\n// Routes\napp.register('.html', require('jade'));\napp.get('/', function(req, res) {\n    fs.readFile(__dirname + '/public/index.html', 'utf8', function(err, text){\n        res.send(text);\n    });\n});\n\n\napp.listen(3000);\nconsole.log(\"Express server listening on port %d in %s mode\", app.address().port, app.settings.env);\n\n\n/////////  START OF GETTING RECENT FILMS FROM MDB ////////////\n\nvar movieCollection = [];\nvar movieCollectionFullDetails = [];\nvar date = getReleaseWeek();\nvar path = 'public/json/'+date;\nvar tomatoesRecent;\n\nvar tomatoesRequest = $.ajax({\n  url: 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey=dtxq8gh9vybznax2hha3mcqg',\n  type: 'GET',\n  dataType: 'jsonp',\n  data: {}\n});\n\n$.when(tomatoesRequest).done(function(data){\n   tomatoesRecent = data;\n\n  for(var x in tomatoesRecent.movies){\n    console.log(tomatoesRecent.movies[x].title)\n    console.log(tomatoesRecent.movies[x].release_dates.dvd);\n  }   \n  \n\n\n    var i = 1;\n    fs.mkdir(path);\n    fs.writeFile(path+'/'+'all-movies.json', JSON.stringify(tomatoesRecent.movies, null, 4));\n\n    for(var x in tomatoesRecent.movies){\n      var currentMovie = tomatoesRecent.movies[x].title;\n      // for each item call the getMDBitem function below which builds the film collection\n      getMDBitem(currentMovie);\n\n      function getMDBitem(theMovie){\n        theMovie = cleanTitle(theMovie);\n\n        var filename = path+'/'+theMovie+'.json';\n        var URL = 'http://api.themoviedb.org/3/search/movie?api_key=c1a2641a1bdc4fe90e68907afed3e1e5&query='+theMovie;\n        var ajaxURL = encodeURI(URL);\n        $.ajax({\n          url: ajaxURL,\n          success: function(data, textStatus, xhr) {\n            var movie = data;\n            movieCollection.push(movie.results[0]);\n            writeToFile(i);\n            i++;\n            \n            // old line that writes out a file for each movie\n            // fs.writeFile(filename, JSON.stringify(data.results[0], null, 4));\n           \n          }\n        }); // end ajax call\n      } \n    } // end for in\n});\n\nfunction getMoreDetails(movies){\n  var i = 1;\n  for (var x in movies){\n  	try{\n  		var Movie = movies[x].id;\n  	}\n	catch(err){\n		// sometimes a movie can note be found on themovie database if this is\n		// the case catch the error thrown \n		console.log('error =',err);\n	}\n    \n    getMDBitemFull(Movie);\n\n    function getMDBitemFull(currentMovie){\n      var ajaxURL = 'http://api.themoviedb.org/3/movie/'+currentMovie+'?api_key=c1a2641a1bdc4fe90e68907afed3e1e5';\n      $.ajax({\n          url: ajaxURL,\n          success: function(data, textStatus, xhr) {\n            var movie = data;\n            $.ajax({\n              url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='+movie.title+'%20Trailer%20HD&key=AIzaSyAq6x7_2dfd3jH_iBIMzR1-oLFRzFXKMdY' \n            }).success(function(data){\n              movie.trailer = data.items[0].id.videoId;\n               movieCollectionFullDetails.push(movie);\n             if(i == movies.length){\n              \n              fs.writeFile(path+'/'+'movies-collection.json', JSON.stringify(movieCollectionFullDetails, null, 4));\n             }\n            i++;\n            });\n\n            \n          }\n      }); // end ajax call\n    }  \n  }\n}\n\nfunction getReleaseWeek(){\n  var curr = new Date; // get current date\n  var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week\n  var last = first + 6; // last day is the first day + 6\n\n  var firstday = new Date(curr.setDate(first)); // first sunday of the week\n\n  var momentObject = moment(firstday); // date converted to moment.js\n  var phasedDate = momentObject.format(\"D-M-YYYY\"); // format with moment.js\n\n  return phasedDate;\n}\n\n\n////// get configeration\n\n$.ajax({\n  url: 'http://api.themoviedb.org/3/configuration?api_key=c1a2641a1bdc4fe90e68907afed3e1e5' \n}).success(function(data){\n  fs.writeFile(path+'/'+'mdbConfig.json', JSON.stringify(data, null, 4));\n});\n\n////// functions called above\n\n// write the collection to a file\nfunction writeToFile(b){\n  if(b == tomatoesRecent.movies.length){ \n\n    getMoreDetails(movieCollection);\n    // write the film collection to a file\n  }\n}\n\n// removes odd charaters in titles\nfunction cleanTitle(title){\n  var symbols = {\n    '@': '%40',\n    '&amp;': '%26',\n    '*': '%2A',\n    '+': '%2B',\n    '/': '%2F',\n    '&lt;': '%3C',\n    '&gt;': '%3E'\n  };\n  title = title.replace(/([@*+/]|&(amp|lt|gt);)/g, function (m) { return symbols[m]; });\n  return title;\n}\n\n\n/////////  END OF GETTING RECENT FILMS FROM MDB ////////////\n\n\n",
-			"file": "app copy.js",
-			"file_size": 5326,
-			"file_write_time": 1357502967000000,
-			"settings":
-			{
-				"buffer_size": 5312,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/javascripts/app.js",
-			"settings":
-			{
-				"buffer_size": 7754,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 0 files for \"movieCollection\"\n\n0 matches across 0 files\n\n\nSearching 1115 files for \"tmbdCollection\"\n\n0 matches across 0 files\n",
-			"settings":
-			{
-				"buffer_size": 136,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"contents": "// The client id is obtained from the Google APIs Console at https://code.google.com/apis/console\n// If you run access this code from a server other than http://localhost, you need to register\n// your own client id.\nvar OAUTH2_CLIENT_ID = '1036347251836.apps.googleusercontent.com';\nvar OAUTH2_SCOPES = [\n  'https://www.googleapis.com/auth/youtube'\n];\n\n// This callback is invoked by the Google APIs JS client automatically when it is loaded.\ngoogleApiClientReady = function() {\n  gapi.auth.init(function() {\n    window.setTimeout(checkAuth, 1);\n    console.log('clientcall');\n  });\n}\n\n// Attempt the immediate OAuth 2 client flow as soon as the page is loaded.\n// If the currently logged in Google Account has previously authorized OAUTH2_CLIENT_ID, then\n// it will succeed with no user intervention. Otherwise, it will fail and the user interface\n// to prompt for authorization needs to be displayed.\nfunction checkAuth() {\n  gapi.auth.authorize({\n    client_id: OAUTH2_CLIENT_ID,\n    scope: OAUTH2_SCOPES,\n    immediate: true\n  }, handleAuthResult);\n  console.log('checkAuth');\n  loadAPIClientInterfaces();\n}\n\n// Handles the result of a gapi.auth.authorize() call.\nfunction handleAuthResult(authResult) {\n  console.log('results', authResult);\n  if (authResult) {\n    // Auth was successful; hide the things related to prompting for auth and show the things\n    // that should be visible after auth succeeds.\n    $('.pre-auth').hide();\n    loadAPIClientInterfaces();\n  } else {\n    // Make the #login-link clickable, and attempt a non-immediate OAuth 2 client flow.\n    // The current function will be called when that flow is complete.\n    $('#login-link').click(function() {\n      gapi.auth.authorize({\n        client_id: OAUTH2_CLIENT_ID,\n        scope: OAUTH2_SCOPES,\n        immediate: false\n        }, handleAuthResult);\n    });\n  }\n}\n\n// Loads the client interface for the YouTube Analytics and Data APIs.\n// This is required before using the Google APIs JS client; more info is available at\n// http://code.google.com/p/google-api-javascript-client/wiki/GettingStarted#Loading_the_Client\nfunction loadAPIClientInterfaces() {\n  gapi.client.load('youtube', 'v3', function() {\n    console.log('youtube loaded');\n  });\n}\n\n",
-			"file": "public/javascripts/auth.js",
-			"file_size": 2227,
-			"file_write_time": 1357433248000000,
-			"settings":
-			{
-				"buffer_size": 2227,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/index.html",
-			"settings":
-			{
-				"buffer_size": 2159,
+				"buffer_size": 1393,
 				"line_ending": "Unix"
 			}
 		}
@@ -359,6 +300,13 @@
 	},
 	"file_history":
 	[
+		"/Users/scott/Documents/-Learning/whensItOut/public/stylesheets/main.css",
+		"/Users/scott/Documents/-Learning/whensItOut/public/index.html",
+		"/Users/scott/Documents/-Learning/whensItOut/public/javascripts/app.js",
+		"/Users/scott/Documents/-Learning/whensItOut/whensitout.sublime-workspace",
+		"/Users/scott/Documents/-Learning/whensItOut/app.js",
+		"/Users/scott/Documents/-Learning/whensItOut/app copy.js",
+		"/Users/scott/Documents/-Learning/whensItOut/public/javascripts/auth.js",
 		"/Users/scott/Documents/-Learning/whensItOut_node/public/javascripts/app.js",
 		"/Users/scott/Documents/-Learning/whensItOut/app/styles/small-device.sass",
 		"/Users/scott/Documents/-Learning/whensItOut/app/index.html",
@@ -373,7 +321,6 @@
 		"/Users/scott/Documents/-Learning/deferres/app/scripts/app.js",
 		"/Users/scott/Sites/www.badger-construction.co.uk/Contact/contact.php",
 		"/Users/scott/Sites/www.badger-construction.co.uk/index.html",
-		"/Users/scott/Documents/-Learning/whensItOut/app.js",
 		"/Users/scott/Documents/-Learning/backbone_test/app/scripts/music2.js",
 		"/Users/scott/Documents/-Learning/backbone_test/app/scripts/music3.js",
 		"/Users/scott/Documents/-Learning/backbone_test/app/index2.html",
@@ -422,7 +369,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 95.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"",
@@ -435,6 +382,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"getMDBitem",
 			"youtube",
 			"console.log",
 			"posterURL",
@@ -561,8 +509,7 @@
 			"background",
 			"complete",
 			"counter",
-			"checkFlag",
-			"id"
+			"checkFlag"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -570,6 +517,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"additionalInfo",
 			"movieCollection",
 			"tmbdCollection",
 			"active",
@@ -590,23 +538,23 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app.js",
+					"file": "public/stylesheets/main.scss",
 					"settings":
 					{
-						"buffer_size": 4673,
+						"buffer_size": 1393,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4464,
-								4464
+								1295,
+								1295
 							]
 						],
 						"settings":
@@ -614,201 +562,11 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1953.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"settings":
-					{
-						"buffer_size": 4121,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1751,
-								1727
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 999.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app copy.js",
-					"settings":
-					{
-						"buffer_size": 5312,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3927,
-								3395
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/javascripts/app.js",
-					"settings":
-					{
-						"buffer_size": 7754,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1109,
-								1118
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 492.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"settings":
-					{
-						"buffer_size": 136,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								68,
-								68
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"incomplete_sync": null,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 68.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "public/javascripts/auth.js",
-					"settings":
-					{
-						"buffer_size": 2227,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								280,
-								240
-							],
-							[
-								351,
-								351
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "public/index.html",
-					"settings":
-					{
-						"buffer_size": 2159,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1745,
-								1745
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"is_xml": false,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 278.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

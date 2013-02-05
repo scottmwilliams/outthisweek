@@ -5,8 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , jsdom = require('jsdom')
-  , $ = require('jQuery')
+  , $ = require('jquery')
   , moment = require('moment')
   , apikeys = require('apikeys')
   , cronJob = require('cron').CronJob
@@ -55,12 +54,12 @@ var job = new cronJob({
   start: false
 });
 job.start();
-
-  var tmdbCollection = [];
-  var tmdbCollectionFullDetails = [];
-  var date = getReleaseWeek();
-  var path = 'public/json/'+date;
-  var tomatoesRecent;
+updateJson();
+var tmdbCollection = [];
+var tmdbCollectionFullDetails = [];
+var date = getReleaseWeek();
+var path = 'public/json/'+date;
+var tomatoesRecent;
 
 function updateJson(){
   // Get recently released dvd's from rotten tomatoes
@@ -117,6 +116,7 @@ function updateJson(){
   $.ajax({
     url: 'http://api.themoviedb.org/3/configuration?api_key='+apikeys.themoviedb 
   }).success(function(data){
+    console.log('done');
     fs.writeFile(path+'/'+'mdbConfig.json', JSON.stringify(data, null, 4));
   });
 }
@@ -128,8 +128,6 @@ function writeToFile(){
 
 
 ////// below are utility function used in the code above //////////
-
-
 
 // get the date of the first sunday of each week used to create the file path 
 // for the JSON files
