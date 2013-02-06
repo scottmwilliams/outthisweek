@@ -12,7 +12,7 @@
         },
         "ratings": {
             "critics_rating": "Certified Fresh",
-            "critics_score": 78,
+            "critics_score": 77,
             "audience_rating": "Upright",
             "audience_score": 79
         },
@@ -376,43 +376,6 @@
         }
     },
     {
-        "id": "771254097",
-        "title": "Samsara",
-        "year": 2012,
-        "mpaa_rating": "PG-13",
-        "runtime": 99,
-        "critics_consensus": "It's a tad heavy-handed in its message, but Samsara's overwhelmingly beautiful visuals more than compensate for any narrative flaws.",
-        "release_dates": {
-            "theater": "2012-08-24",
-            "dvd": "2013-01-08"
-        },
-        "ratings": {
-            "critics_rating": "Certified Fresh",
-            "critics_score": 76,
-            "audience_rating": "Upright",
-            "audience_score": 87
-        },
-        "synopsis": "Prepare yourself for an unparalleled sensory experience. Samsara reunites director Ron Fricke and producer Mark Magidson, whose award-winning films Baraka and Chronos were acclaimed for combining visual and musical artistry. Samsara is a Sanskrit word that means \"the ever turning wheel of life\" and is the point of departure for the filmmakers as they search for the elusive current of interconnection that runs through our lives. Filmed over a period of almost five years and in twenty-five countries, Samsara transports us to sacred grounds, disaster zones, industrial sites, and natural wonders. By dispensing with dialogue and descriptive text, Samsara subverts our expectations of a traditional documentary, instead encouraging our own inner interpretations inspired by images and music that infuses the ancient with the modern. -- (C) Oscilloscope",
-        "posters": {
-            "thumbnail": "http://content7.flixster.com/movie/11/16/62/11166205_mob.jpg",
-            "profile": "http://content7.flixster.com/movie/11/16/62/11166205_pro.jpg",
-            "detailed": "http://content7.flixster.com/movie/11/16/62/11166205_det.jpg",
-            "original": "http://content7.flixster.com/movie/11/16/62/11166205_ori.jpg"
-        },
-        "abridged_cast": [],
-        "alternate_ids": {
-            "imdb": "0770802"
-        },
-        "links": {
-            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097.json",
-            "alternate": "http://www.rottentomatoes.com/m/samsara_2012/",
-            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/cast.json",
-            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/clips.json",
-            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/reviews.json",
-            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/similar.json"
-        }
-    },
-    {
         "id": "771267239",
         "title": "Compliance",
         "year": 2012,
@@ -425,9 +388,9 @@
         },
         "ratings": {
             "critics_rating": "Certified Fresh",
-            "critics_score": 89,
+            "critics_score": 90,
             "audience_rating": "Upright",
-            "audience_score": 71
+            "audience_score": 70
         },
         "synopsis": "Becky and Sandra aren't the best of friends. Sandra is a middle-aged manager at a fast-food restaurant; Becky is a teenaged counter girl who really needs the job. One stressful day (too many customers and too little bacon), a police officer calls, accusing Becky of stealing money from a customer's purse, which she vehemently denies. Sandra, overwhelmed by her managerial responsibilities, complies with the officer's orders to detain Becky. This choice begins a nightmare that tragically blurs the lines between expedience and prudence, legality and reason. -- (C) Magnolia",
         "posters": {
@@ -486,6 +449,43 @@
         }
     },
     {
+        "id": "771254097",
+        "title": "Samsara",
+        "year": 2012,
+        "mpaa_rating": "PG-13",
+        "runtime": 99,
+        "critics_consensus": "It's a tad heavy-handed in its message, but Samsara's overwhelmingly beautiful visuals more than compensate for any narrative flaws.",
+        "release_dates": {
+            "theater": "2012-08-24",
+            "dvd": "2013-01-08"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 76,
+            "audience_rating": "Upright",
+            "audience_score": 87
+        },
+        "synopsis": "Prepare yourself for an unparalleled sensory experience. Samsara reunites director Ron Fricke and producer Mark Magidson, whose award-winning films Baraka and Chronos were acclaimed for combining visual and musical artistry. Samsara is a Sanskrit word that means \"the ever turning wheel of life\" and is the point of departure for the filmmakers as they search for the elusive current of interconnection that runs through our lives. Filmed over a period of almost five years and in twenty-five countries, Samsara transports us to sacred grounds, disaster zones, industrial sites, and natural wonders. By dispensing with dialogue and descriptive text, Samsara subverts our expectations of a traditional documentary, instead encouraging our own inner interpretations inspired by images and music that infuses the ancient with the modern. -- (C) Oscilloscope",
+        "posters": {
+            "thumbnail": "http://content7.flixster.com/movie/11/16/62/11166205_mob.jpg",
+            "profile": "http://content7.flixster.com/movie/11/16/62/11166205_pro.jpg",
+            "detailed": "http://content7.flixster.com/movie/11/16/62/11166205_det.jpg",
+            "original": "http://content7.flixster.com/movie/11/16/62/11166205_ori.jpg"
+        },
+        "abridged_cast": [],
+        "alternate_ids": {
+            "imdb": "0770802"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097.json",
+            "alternate": "http://www.rottentomatoes.com/m/samsara_2012/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/similar.json"
+        }
+    },
+    {
         "id": "771206182",
         "title": "Touchback",
         "year": 2012,
@@ -499,7 +499,7 @@
             "critics_rating": "Rotten",
             "critics_score": 42,
             "audience_rating": "Upright",
-            "audience_score": 62
+            "audience_score": 63
         },
         "synopsis": "Former high school football star turned farmer and family man, Scott Murphy (Brian Presley) finds himself with a unique opportunity to revisit his glory days during the Ohio State championship game where he permanently injured his knee in a game-winning play. Given a second shot at his destiny, Scott seeks counsel from Coach Hand (Kurt Russell), Scott's longtime mentor on and off the field, to help him decide whether to let his fate unfold, or follow a path that will change his future. -- (C) Official Site",
         "posters": {
@@ -941,7 +941,7 @@
             "critics_rating": "Certified Fresh",
             "critics_score": 77,
             "audience_rating": "Upright",
-            "audience_score": 67
+            "audience_score": 66
         },
         "synopsis": "When 22 year-old drug dealer Chris (Hirsch) has his stash of drugs stolen from him by his mother, he has to come up with six-thousand dollars quick, or he's dead. Desperate, he goes to the trailer-park to see his father, Ansel (Hayden Church), and he lays out the plan. Chris's mother, who everyone hates, has a life insurance policy that would clear up his debt and make them all rich. The problem is that Chris' mother is very much alive. Enter Detective \"Killer\" Joe Cooper, a hired hit man with the manners of a Southern gentleman, who will do the job - for an upfront fee, that Chris and Ansel can't pay. Just as Joe is about to leave, he spots Dottie (Temple), Chris' innocent younger sister. Joe makes Chris an offer, he'll keep Dottie as sexual collateral until the money is collected and his fee can be paid. -- (C) Voltage Pictures",
         "posters": {
@@ -1017,7 +1017,7 @@
         },
         "ratings": {
             "critics_rating": "Certified Fresh",
-            "critics_score": 84,
+            "critics_score": 85,
             "audience_rating": "Upright",
             "audience_score": 67
         },

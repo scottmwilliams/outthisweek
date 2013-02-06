@@ -5,16 +5,20 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , jsdom = require('jsdom')
-  , $ = require('jQuery')
+  , $ = require('jquery')
   , moment = require('moment')
-  , apikeys = require('apikeys')
   , cronJob = require('cron').CronJob
   , fs = require('fs');
 
 var app = module.exports = express.createServer();
 
 // Configuration
+apikeys = {
+  'rottentomatoes':'dtxq8gh9vybznax2hha3mcqg',
+    'themoviedb':'c1a2641a1bdc4fe90e68907afed3e1e5',
+    'google':'AIzaSyAq6x7_2dfd3jH_iBIMzR1-oLFRzFXKMdY'
+}
+
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -42,7 +46,10 @@ app.get('/', function(req, res) {
 });
 
 
-app.listen(3000);
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 console.log("Make sure you change your api keys in node_modules/apikeys/index.js");
 
@@ -55,12 +62,12 @@ var job = new cronJob({
   start: false
 });
 job.start();
-
-  var tmdbCollection = [];
-  var tmdbCollectionFullDetails = [];
-  var date = getReleaseWeek();
-  var path = 'public/json/'+date;
-  var tomatoesRecent;
+updateJson();
+var tmdbCollection = [];
+var tmdbCollectionFullDetails = [];
+var date = getReleaseWeek();
+var path = 'public/json/'+date;
+var tomatoesRecent;
 
 function updateJson(){
   // Get recently released dvd's from rotten tomatoes
@@ -117,6 +124,7 @@ function updateJson(){
   $.ajax({
     url: 'http://api.themoviedb.org/3/configuration?api_key='+apikeys.themoviedb 
   }).success(function(data){
+    console.log('done');
     fs.writeFile(path+'/'+'mdbConfig.json', JSON.stringify(data, null, 4));
   });
 }
@@ -128,8 +136,6 @@ function writeToFile(){
 
 
 ////// below are utility function used in the code above //////////
-
-
 
 // get the date of the first sunday of each week used to create the file path 
 // for the JSON files
