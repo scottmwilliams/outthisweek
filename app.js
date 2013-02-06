@@ -5,6 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , apiKeys = require('apiKeys')
   , $ = require('jquery')
   , moment = require('moment')
   , cronJob = require('cron').CronJob
@@ -13,12 +14,9 @@ var express = require('express')
 var app = module.exports = express.createServer();
 
 // Configuration
-apikeys = {
-  'rottentomatoes':'dtxq8gh9vybznax2hha3mcqg',
-    'themoviedb':'c1a2641a1bdc4fe90e68907afed3e1e5',
-    'google':'AIzaSyAq6x7_2dfd3jH_iBIMzR1-oLFRzFXKMdY'
-}
 
+
+console.log(apiKeys.keys.rottentomatoes);
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -72,7 +70,7 @@ var tomatoesRecent;
 function updateJson(){
   // Get recently released dvd's from rotten tomatoes
   var tomatoesRequest = $.ajax({
-    url: 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey='+apikeys.rottentomatoes+'&page_limit=20&page=1&country=us',
+    url: 'http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey='+apiKeys.keys.rottentomatoes+'&page_limit=20&page=1&country=us',
     type: 'GET',
     dataType: 'jsonp',
     data: {}
@@ -94,20 +92,19 @@ function updateJson(){
           movieTitle = cleanTitle(movieTitle);
                 if(i < numberOfFilms){            
                    var filename = path+'/'+movieTitle+'.json';
-                    var URL = 'http://api.themoviedb.org/3/search/movie?api_key='+apikeys.themoviedb+'&query='+movieTitle;
+                    var URL = 'http://api.themoviedb.org/3/search/movie?api_key='+apiKeys.keys.themoviedb+'&query='+movieTitle;
                     var ajaxURL = encodeURI(URL);
                     $.ajax({
                       url: ajaxURL,
                       success: function(data, textStatus, xhr) {
                         var movie = data; 
                         $.ajax({
-                          url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='+movieTitle+'%20Official%20Trailer%20HD&key='+apikeys.google
+                          url: 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='+movieTitle+'%20Official%20Trailer%20HD&key='+apiKeys.keys.google
                         }).success(function(data){
                           movieObj.trailer = data.items[0].id.videoId;
                           movieObj.poster_path = movie.results[0].poster_path;
                           movieObj.backdrop_path = movie.results[0].backdrop_path;
                           tmdbCollection.push(movieObj);
-                          console.log(i +' = '+ tomatoesRecent.movies[i].title);
                           additionalInfo(tomatoesRecent.movies[i], tomatoesRecent.movies[i].title);
                           i++;
                         });
@@ -122,9 +119,8 @@ function updateJson(){
 
   // get conf file for tmdb this is needed to build the full URL from images
   $.ajax({
-    url: 'http://api.themoviedb.org/3/configuration?api_key='+apikeys.themoviedb 
+    url: 'http://api.themoviedb.org/3/configuration?api_key='+apiKeys.keys.themoviedb 
   }).success(function(data){
-    console.log('done');
     fs.writeFile(path+'/'+'mdbConfig.json', JSON.stringify(data, null, 4));
   });
 }
