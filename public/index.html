@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>Out this week...</title>
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width"/>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="stylesheets/normalize.css"/>
+        <link rel="stylesheet" href="stylesheets/main.css"/>
+        <script src="javascripts/vendor/modernizr/modernizr.js"></script>
+        <script src="javascripts/vendor/jquery/jquery.min.js"></script>
+        <script src="javascripts/vendor/underscore/underscore-min.js"></script>
+        <script src="javascripts/vendor/backbone/backbone-min.js"></script>
+        <script src="javascripts/vendor/moment/moment.js"></script>
+        <script src="javascripts/app.js"></script>
+    </head>
+    <body>
+        <script type="text/template" id="details-template">
+            <div class="details">
+                    <h1><%= title %></h1>
+                     <p>DVD Release: <%= release_dates.dvd %></p>
+                    <p><%= synopsis %></p>
+                     <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/<%= trailer %>" frameborder="0">
+            </div>
+        </script>
+
+         <script type="text/template" id="film-template">
+                <a href="#" class="poster-link"  data-id="<%= id %>" >
+                <img src="<%= posterURL %>" /></a>
+        </script>
+
+        <ul class="pager">
+            <li class="next">Next</li>
+            <li class="prev">Prev</li>
+            or use arow keys
+        </ul>
+
+        <ul class="films-view"> 
+        </ul> 
+
+        <p class="select-item">Select a movie</p>
+        <ul class="details-view"> 
+        </ul>     
+        
+       <div class="background-overlay"></div>
+
+    <script type="text/javascript" data-project="whensItOut" src="http://localhost:48626/edge.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1511 @@
+[
+    {
+        "id": "771207918",
+        "title": "Dredd",
+        "year": 2012,
+        "mpaa_rating": "R",
+        "runtime": 95,
+        "critics_consensus": "Fueled by bombastic violence and impressive special effects, rooted in self-satire and deadpan humor, Dredd 3D is a rare example of a remake that actually works.",
+        "release_dates": {
+            "theater": "2012-09-21",
+            "dvd": "2013-01-08"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 77,
+            "audience_rating": "Upright",
+            "audience_score": 79
+        },
+        "synopsis": "The future America is an irradiated waste land. On its East Coast, running from Boston to Washington DC, lies Mega City One- a vast, violent metropolis where criminals rule the chaotic streets. The only force of order lies with the urban cops called \"Judges\" who possess the combined powers of judge, jury and instant executioner. Known and feared throughout the city, Dredd (Karl Urban) is the ultimate Judge, challenged with ridding the city of its latest scourge - a dangerous drug epidemic that has users of \"Slo-Mo\" experiencing reality at a fraction of its normal speed. -- (C) Lionsgate",
+        "posters": {
+            "thumbnail": "http://content6.flixster.com/movie/11/16/82/11168284_mob.jpg",
+            "profile": "http://content6.flixster.com/movie/11/16/82/11168284_pro.jpg",
+            "detailed": "http://content6.flixster.com/movie/11/16/82/11168284_det.jpg",
+            "original": "http://content6.flixster.com/movie/11/16/82/11168284_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Karl Urban",
+                "id": "162654704",
+                "characters": [
+                    "Judge Dredd"
+                ]
+            },
+            {
+                "name": "Olivia Thirlby",
+                "id": "326433362",
+                "characters": [
+                    "Cassandra Anderson"
+                ]
+            },
+            {
+                "name": "Lena Headey",
+                "id": "162653508",
+                "characters": [
+                    "Ma-Ma"
+                ]
+            },
+            {
+                "name": "Wood Harris",
+                "id": "162696247",
+                "characters": [
+                    "Kay"
+                ]
+            },
+            {
+                "name": "Langley Kirkwood",
+                "id": "770688827",
+                "characters": [
+                    "Judge Lex"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1343727"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771207918.json",
+            "alternate": "http://www.rottentomatoes.com/m/dredd/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771207918/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771207918/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771207918/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771207918/similar.json"
+        },
+        "trailer": "dp8Nw-yZEIQ",
+        "poster_path": "/71fkYuMVMtdbREh9Mp3gTFmI8Bv.jpg",
+        "backdrop_path": "/kqKcID44nGtIxhhzmziAX65abRx.jpg"
+    },
+    {
+        "id": "771207918",
+        "title": "Dredd",
+        "year": 2012,
+        "mpaa_rating": "R",
+        "runtime": 95,
+        "critics_consensus": "Fueled by bombastic violence and impressive special effects, rooted in self-satire and deadpan humor, Dredd 3D is a rare example of a remake that actually works.",
+        "release_dates": {
+            "theater": "2012-09-21",
+            "dvd": "2013-01-08"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 77,
+            "audience_rating": "Upright",
+            "audience_score": 79
+        },
+        "synopsis": "The future America is an irradiated waste land. On its East Coast, running from Boston to Washington DC, lies Mega City One- a vast, violent metropolis where criminals rule the chaotic streets. The only force of order lies with the urban cops called \"Judges\" who possess the combined powers of judge, jury and instant executioner. Known and feared throughout the city, Dredd (Karl Urban) is the ultimate Judge, challenged with ridding the city of its latest scourge - a dangerous drug epidemic that has users of \"Slo-Mo\" experiencing reality at a fraction of its normal speed. -- (C) Lionsgate",
+        "posters": {
+            "thumbnail": "http://content6.flixster.com/movie/11/16/82/11168284_mob.jpg",
+            "profile": "http://content6.flixster.com/movie/11/16/82/11168284_pro.jpg",
+            "detailed": "http://content6.flixster.com/movie/11/16/82/11168284_det.jpg",
+            "original": "http://content6.flixster.com/movie/11/16/82/11168284_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Karl Urban",
+                "id": "162654704",
+                "characters": [
+                    "Judge Dredd"
+                ]
+            },
+            {
+                "name": "Olivia Thirlby",
+                "id": "326433362",
+                "characters": [
+                    "Cassandra Anderson"
+                ]
+            },
+            {
+                "name": "Lena Headey",
+                "id": "162653508",
+                "characters": [
+                    "Ma-Ma"
+                ]
+            },
+            {
+                "name": "Wood Harris",
+                "id": "162696247",
+                "characters": [
+                    "Kay"
+                ]
+            },
+            {
+                "name": "Langley Kirkwood",
+                "id": "770688827",
+                "characters": [
+                    "Judge Lex"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1343727"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771207918.json",
+            "alternate": "http://www.rottentomatoes.com/m/dredd/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771207918/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771207918/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771207918/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771207918/similar.json"
+        },
+        "trailer": "dp8Nw-yZEIQ",
+        "poster_path": "/71fkYuMVMtdbREh9Mp3gTFmI8Bv.jpg",
+        "backdrop_path": "/kqKcID44nGtIxhhzmziAX65abRx.jpg"
+    },
+    {
+        "id": "771205894",
+        "title": "Frankenweenie",
+        "year": 2012,
+        "mpaa_rating": "PG",
+        "runtime": 90,
+        "critics_consensus": "Frankenweenie is an energetic stop-motion horror movie spoof with lovingly crafted visuals and a heartfelt, oddball story.",
+        "release_dates": {
+            "theater": "2012-10-05",
+            "dvd": "2013-01-08"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 88,
+            "audience_rating": "Upright",
+            "audience_score": 76
+        },
+        "synopsis": "From creative genius Tim Burton comes Frankenweenie, a heartwarming tale about a boy and his dog. After unexpectedly losing his beloved dog Sparky, young Victor harnesses the power of science to bring his best friend back to life-with just a few minor adjustments. He tries to hide his home-sewn creation, but when Sparky gets out, Victor's fellow students, teachers and the entire town all learn that getting a new \"leash on life\" can be monstrous. A stop-motion animated film, Frankenweenie will be filmed in black and white and rendered in 3D, which will elevate the classic style to a whole new experience. -- (C) Disney",
+        "posters": {
+            "thumbnail": "http://content7.flixster.com/movie/11/16/54/11165465_mob.jpg",
+            "profile": "http://content7.flixster.com/movie/11/16/54/11165465_pro.jpg",
+            "detailed": "http://content7.flixster.com/movie/11/16/54/11165465_det.jpg",
+            "original": "http://content7.flixster.com/movie/11/16/54/11165465_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Charlie Tahan",
+                "id": "770670076",
+                "characters": [
+                    "Victor",
+                    "Victor Frankenstein",
+                    "Young Victor"
+                ]
+            },
+            {
+                "name": "Winona Ryder",
+                "id": "162659115",
+                "characters": [
+                    "Elsa",
+                    "Elsa Van Helsing"
+                ]
+            },
+            {
+                "name": "Martin Landau",
+                "id": "162658209",
+                "characters": [
+                    "Mr. Rzykruski"
+                ]
+            },
+            {
+                "name": "Catherine O'Hara",
+                "id": "162658234",
+                "characters": [
+                    "Gym Teacher",
+                    "Mrs. Frankenstein",
+                    "Victor's Mom",
+                    "Weird Girl"
+                ]
+            },
+            {
+                "name": "Martin Short",
+                "id": "162657763",
+                "characters": [
+                    "Dad",
+                    "Edward Frankenstein",
+                    "Mr. Bergemeister",
+                    "Mr. Burgemeister",
+                    "Mr. Frankenstein",
+                    "Nassor"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1142977"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771205894.json",
+            "alternate": "http://www.rottentomatoes.com/m/frankenweenie_2012/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771205894/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771205894/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771205894/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771205894/similar.json"
+        },
+        "trailer": "gXQLjNHHslk",
+        "poster_path": "/zMFJ0Uy9y0Oy3KPbgtRic6IYzRk.jpg",
+        "backdrop_path": "/dpkyNq8jBU7tR6n5sEd4Ep61EOP.jpg"
+    },
+    {
+        "id": "771240777",
+        "title": "House at the End of the Street",
+        "year": 2012,
+        "mpaa_rating": "PG-13",
+        "runtime": 101,
+        "critics_consensus": "Poorly conceived, clumsily executed, and almost completely bereft of scares, House at the End of the Street strands its talented star in a film as bland as its title.",
+        "release_dates": {
+            "theater": "2012-09-21",
+            "dvd": "2013-01-08"
+        },
+        "ratings": {
+            "critics_rating": "Rotten",
+            "critics_score": 11,
+            "audience_rating": "Spilled",
+            "audience_score": 47
+        },
+        "synopsis": "Seeking a fresh start, newly divorced Sarah (Elisabeth Shue) and her daughter Elissa (Jennifer Lawrence) find the house of their dreams in a small, upscale, rural town. But when startling and unexplainable events begin to happen, Sarah and Elissa learn the town is in the shadows of a chilling secret. Years earlier, in the house next door, a daughter killed her parents in their beds, and disappeared - leaving only a brother, Ryan (Max Thieriot), as the sole survivor. Against Sarah's wishes, Elissa begins a relationship with the reclusive Ryan - and the closer they get, the deeper they're all pulled into a mystery more dangerous than they ever imagined. -- (C) Relativity",
+        "posters": {
+            "thumbnail": "http://content8.flixster.com/movie/11/16/45/11164530_mob.jpg",
+            "profile": "http://content8.flixster.com/movie/11/16/45/11164530_pro.jpg",
+            "detailed": "http://content8.flixster.com/movie/11/16/45/11164530_det.jpg",
+            "original": "http://content8.flixster.com/movie/11/16/45/11164530_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Jennifer Lawrence",
+                "id": "770800260",
+                "characters": [
+                    "Elissa"
+                ]
+            },
+            {
+                "name": "Elisabeth Shue",
+                "id": "162654719",
+                "characters": [
+                    "Sarah"
+                ]
+            },
+            {
+                "name": "Max Thieriot",
+                "id": "770782432",
+                "characters": [
+                    "Ryan"
+                ]
+            },
+            {
+                "name": "Gil Bellows",
+                "id": "162716278",
+                "characters": [
+                    "Weaver"
+                ]
+            },
+            {
+                "name": "Eva Link",
+                "id": "771420964",
+                "characters": [
+                    "Carrie Anne"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1582507"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771240777.json",
+            "alternate": "http://www.rottentomatoes.com/m/house_at_the_end_of_the_street/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771240777/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771240777/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771240777/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771240777/similar.json"
+        },
+        "trailer": "GPXxq-BRo4A",
+        "poster_path": "/dR1XOAYHK1hwgbitZaV1lXXzUxY.jpg",
+        "backdrop_path": "/xRfK7mUyMx9a0tGIc7NiHts2mgd.jpg"
+    },
+    {
+        "id": "771265551",
+        "title": "Hit & Run",
+        "year": 2012,
+        "mpaa_rating": "R",
+        "runtime": 100,
+        "critics_consensus": "Though Hit & Run has some surprisingly oft-kilter filmmaking, the action doesn't add to much and the writing's a bit smug.",
+        "release_dates": {
+            "theater": "2012-08-22",
+            "dvd": "2013-01-08"
+        },
+        "ratings": {
+            "critics_rating": "Rotten",
+            "critics_score": 47,
+            "audience_rating": "Spilled",
+            "audience_score": 53
+        },
+        "synopsis": "Hit and Run is a comedy about a young couple (Kristen Bell and Dax Shepard) that risks it all when they leave their small town life and embark on a road trip that may lead them towards the opportunity of a lifetime. Their fast-paced road trip grows awkwardly complicated and hilarious when they are chased by a friend from the past (Bradley Cooper), a federal marshal (Tom Arnold) and a band of misfits. -- (C) Open Road",
+        "posters": {
+            "thumbnail": "http://content9.flixster.com/movie/11/16/80/11168039_mob.jpg",
+            "profile": "http://content9.flixster.com/movie/11/16/80/11168039_pro.jpg",
+            "detailed": "http://content9.flixster.com/movie/11/16/80/11168039_det.jpg",
+            "original": "http://content9.flixster.com/movie/11/16/80/11168039_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Bradley Cooper",
+                "id": "351525448",
+                "characters": [
+                    "Alex Dmitri"
+                ]
+            },
+            {
+                "name": "Kristen Bell",
+                "id": "326395677",
+                "characters": [
+                    "Annie"
+                ]
+            },
+            {
+                "name": "Kristin Chenoweth",
+                "id": "162657121",
+                "characters": [
+                    "Debbie"
+                ]
+            },
+            {
+                "name": "Dax Shepard",
+                "id": "162655166",
+                "characters": [
+                    "Charlie Bronson"
+                ]
+            },
+            {
+                "name": "Beau Bridges",
+                "id": "162664689",
+                "characters": [
+                    "Clint Perkins"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "2097307"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771265551.json",
+            "alternate": "http://www.rottentomatoes.com/m/hit_and_run_2012/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771265551/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771265551/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771265551/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771265551/similar.json"
+        },
+        "trailer": "9FyKg1w23Rc",
+        "poster_path": "/fKlHDj9vGuapS3MKpezwlKFqz4w.jpg",
+        "backdrop_path": "/wxx7fHnNl7IpN9oJTH07NzIapW3.jpg"
+    },
+    {
+        "id": "771309696",
+        "title": "Stolen",
+        "year": 2012,
+        "mpaa_rating": "R",
+        "runtime": 96,
+        "release_dates": {
+            "theater": "2012-09-14",
+            "dvd": "2013-01-08"
+        },
+        "ratings": {
+            "critics_rating": "Rotten",
+            "critics_score": 13,
+            "audience_rating": "Spilled",
+            "audience_score": 31
+        },
+        "synopsis": "Will Montgomery (Nicolas Cage) is a master thief who after being double-crossed in a heist gone awry is sent to prison for 8 years. Upon his release he's ready to leave his criminal past behind and try to rebuild a relationship with his estranged daughter Allison. The FBI and his old cohorts believe that he hid the loot from the last heist 8 years ago, $10 Million in Bonds. To get his hands on it, his old partner Vincent kidnaps Allison and demands the entire $ 10 Million as ransom. Montgomery only has one day to get the $10 Million ransom but much to the disbelief of the FBI on his trail and Vincent, Will doesn't actually have it. Instead, he must trust his instincts and his old partner in crime, the beautiful, sexy and smart Riley, to do one more, clever heist to get his daughter back alive before it's too late. -- (C) Official Site",
+        "posters": {
+            "thumbnail": "http://content9.flixster.com/movie/11/16/65/11166575_mob.jpg",
+            "profile": "http://content9.flixster.com/movie/11/16/65/11166575_pro.jpg",
+            "detailed": "http://content9.flixster.com/movie/11/16/65/11166575_det.jpg",
+            "original": "http://content9.flixster.com/movie/11/16/65/11166575_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Nicolas Cage",
+                "id": "162653923",
+                "characters": [
+                    "Will Montgomery"
+                ]
+            },
+            {
+                "name": "Josh Lucas",
+                "id": "162652973",
+                "characters": [
+                    "Vincent"
+                ]
+            },
+            {
+                "name": "Danny Huston",
+                "id": "162653683",
+                "characters": [
+                    "Tim Harlend"
+                ]
+            },
+            {
+                "name": "Malin Akerman",
+                "id": "512896981",
+                "characters": [
+                    "Riley Jeffers",
+                    "Riley Simms"
+                ]
+            },
+            {
+                "name": "Sami Gayle",
+                "id": "771398411",
+                "characters": [
+                    "Alison Loeb"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1656186"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771309696.json",
+            "alternate": "http://www.rottentomatoes.com/m/stolen_2012/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771309696/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771309696/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771309696/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771309696/similar.json"
+        },
+        "trailer": "rpMxOjUjweA",
+        "poster_path": "/pkJyIiDg8s9zEbmOvm628rRGzC6.jpg",
+        "backdrop_path": "/pMqte6GPpmqh8kJcbx9uUtokvx0.jpg"
+    },
+    {
+        "id": "771267239",
+        "title": "Compliance",
+        "year": 2012,
+        "mpaa_rating": "R",
+        "runtime": 90,
+        "critics_consensus": "Anchored by smart, sensitive direction and strong performances, Complicance is a ripped-from-the-headlines thriller that's equal parts gripping and disturbing.",
+        "release_dates": {
+            "theater": "2012-08-17",
+            "dvd": "2013-01-08"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 90,
+            "audience_rating": "Upright",
+            "audience_score": 70
+        },
+        "synopsis": "Becky and Sandra aren't the best of friends. Sandra is a middle-aged manager at a fast-food restaurant; Becky is a teenaged counter girl who really needs the job. One stressful day (too many customers and too little bacon), a police officer calls, accusing Becky of stealing money from a customer's purse, which she vehemently denies. Sandra, overwhelmed by her managerial responsibilities, complies with the officer's orders to detain Becky. This choice begins a nightmare that tragically blurs the lines between expedience and prudence, legality and reason. -- (C) Magnolia",
+        "posters": {
+            "thumbnail": "http://content9.flixster.com/movie/11/16/57/11165767_mob.jpg",
+            "profile": "http://content9.flixster.com/movie/11/16/57/11165767_pro.jpg",
+            "detailed": "http://content9.flixster.com/movie/11/16/57/11165767_det.jpg",
+            "original": "http://content9.flixster.com/movie/11/16/57/11165767_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Ann Dowd",
+                "id": "364660474",
+                "characters": [
+                    "Sandra"
+                ]
+            },
+            {
+                "name": "Dreama Walker",
+                "id": "770812968",
+                "characters": [
+                    "Becky"
+                ]
+            },
+            {
+                "name": "Pat Healy",
+                "id": "410745293",
+                "characters": [
+                    "Officer Daniels"
+                ]
+            },
+            {
+                "name": "Bill Camp",
+                "id": "770877563",
+                "characters": [
+                    "Van"
+                ]
+            },
+            {
+                "name": "Philip Ettinger",
+                "id": "771078580",
+                "characters": [
+                    "Kevin"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1971352"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771267239.json",
+            "alternate": "http://www.rottentomatoes.com/m/compliance_2012/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771267239/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771267239/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771267239/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771267239/similar.json"
+        },
+        "trailer": "WdONydDX44I",
+        "poster_path": "/v6n2ZctRLlEy5utzSY97LNNgxsw.jpg",
+        "backdrop_path": "/yCD1tisM8dWg1axxZDcXsmdY6hx.jpg"
+    },
+    {
+        "id": "771254097",
+        "title": "Samsara",
+        "year": 2012,
+        "mpaa_rating": "PG-13",
+        "runtime": 99,
+        "critics_consensus": "It's a tad heavy-handed in its message, but Samsara's overwhelmingly beautiful visuals more than compensate for any narrative flaws.",
+        "release_dates": {
+            "theater": "2012-08-24",
+            "dvd": "2013-01-08"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 76,
+            "audience_rating": "Upright",
+            "audience_score": 87
+        },
+        "synopsis": "Prepare yourself for an unparalleled sensory experience. Samsara reunites director Ron Fricke and producer Mark Magidson, whose award-winning films Baraka and Chronos were acclaimed for combining visual and musical artistry. Samsara is a Sanskrit word that means \"the ever turning wheel of life\" and is the point of departure for the filmmakers as they search for the elusive current of interconnection that runs through our lives. Filmed over a period of almost five years and in twenty-five countries, Samsara transports us to sacred grounds, disaster zones, industrial sites, and natural wonders. By dispensing with dialogue and descriptive text, Samsara subverts our expectations of a traditional documentary, instead encouraging our own inner interpretations inspired by images and music that infuses the ancient with the modern. -- (C) Oscilloscope",
+        "posters": {
+            "thumbnail": "http://content7.flixster.com/movie/11/16/62/11166205_mob.jpg",
+            "profile": "http://content7.flixster.com/movie/11/16/62/11166205_pro.jpg",
+            "detailed": "http://content7.flixster.com/movie/11/16/62/11166205_det.jpg",
+            "original": "http://content7.flixster.com/movie/11/16/62/11166205_ori.jpg"
+        },
+        "abridged_cast": [],
+        "alternate_ids": {
+            "imdb": "0770802"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097.json",
+            "alternate": "http://www.rottentomatoes.com/m/samsara_2012/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771254097/similar.json"
+        },
+        "trailer": "qp967YAAdNk",
+        "poster_path": "/48DZ4MewllwsQ3tOsky5GhOcuBT.jpg",
+        "backdrop_path": "/9zEguaP31VaPhIzEOYWphk4n5ox.jpg"
+    },
+    {
+        "id": "771206182",
+        "title": "Touchback",
+        "year": 2012,
+        "mpaa_rating": "PG-13",
+        "runtime": 118,
+        "release_dates": {
+            "theater": "2012-04-13",
+            "dvd": "2013-01-08"
+        },
+        "ratings": {
+            "critics_rating": "Rotten",
+            "critics_score": 42,
+            "audience_rating": "Upright",
+            "audience_score": 63
+        },
+        "synopsis": "Former high school football star turned farmer and family man, Scott Murphy (Brian Presley) finds himself with a unique opportunity to revisit his glory days during the Ohio State championship game where he permanently injured his knee in a game-winning play. Given a second shot at his destiny, Scott seeks counsel from Coach Hand (Kurt Russell), Scott's longtime mentor on and off the field, to help him decide whether to let his fate unfold, or follow a path that will change his future. -- (C) Official Site",
+        "posters": {
+            "thumbnail": "http://content8.flixster.com/movie/11/16/38/11163890_mob.jpg",
+            "profile": "http://content8.flixster.com/movie/11/16/38/11163890_pro.jpg",
+            "detailed": "http://content8.flixster.com/movie/11/16/38/11163890_det.jpg",
+            "original": "http://content8.flixster.com/movie/11/16/38/11163890_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Kurt Russell",
+                "id": "162652945",
+                "characters": [
+                    "Coach Hand"
+                ]
+            },
+            {
+                "name": "Brian Presley",
+                "id": "357424978",
+                "characters": [
+                    "Murphy",
+                    "Scott Murphy"
+                ]
+            },
+            {
+                "name": "Melanie Lynskey",
+                "id": "208150762",
+                "characters": [
+                    "Macy"
+                ]
+            },
+            {
+                "name": "Marc Blucas",
+                "id": "162662636",
+                "characters": [
+                    "Hall"
+                ]
+            },
+            {
+                "name": "Christine Lahti",
+                "id": "162664736",
+                "characters": [
+                    "Thelma"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1628055"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771206182.json",
+            "alternate": "http://www.rottentomatoes.com/m/touchback/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771206182/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771206182/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771206182/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771206182/similar.json"
+        },
+        "trailer": "m72bV94n0ug",
+        "poster_path": "/M1jJCflrJXFYHaFko8vDaGIY7W.jpg",
+        "backdrop_path": "/8jVxrAfjtWNHhsub9jYDmMmV2kU.jpg"
+    },
+    {
+        "id": "771225278",
+        "title": "Cosmopolis",
+        "year": 2012,
+        "mpaa_rating": "R",
+        "runtime": 108,
+        "critics_consensus": "Though some may find it cold and didactic, Cosmopolis benefits from David Cronenberg's precise direction, resulting in a psychologically complex adaptation of Don DeLillo's novel.",
+        "release_dates": {
+            "theater": "2012-08-17",
+            "dvd": "2013-01-01"
+        },
+        "ratings": {
+            "critics_rating": "Fresh",
+            "critics_score": 65,
+            "audience_rating": "Spilled",
+            "audience_score": 37
+        },
+        "synopsis": "New York City, not-too-distant-future: Eric Packer, a 28 year-old finance golden boy dreaming of living in a civilization ahead of this one, watches a dark shadow cast over the firmament of the Wall Street galaxy, of which he is the uncontested king. As he is chauffeured across midtown Manhattan to get a haircut at his father's old barber, his anxious eyes are glued to the yuan's exchange rate: it is mounting against all expectations, destroying Eric's bet against it. Eric Packer is losing his empire with every tick of the clock. Meanwhile, an eruption of wild activity unfolds in the city's streets. Petrified as the threats of the real world infringe upon his cloud of virtual convictions, his paranoia intensifies during the course of his 24-hour cross-town odyssey. Packer starts to piece together clues that lead him to a most terrifying secret: his imminent assassination. -- (C) Official Site",
+        "posters": {
+            "thumbnail": "http://content7.flixster.com/movie/11/16/41/11164165_mob.jpg",
+            "profile": "http://content7.flixster.com/movie/11/16/41/11164165_pro.jpg",
+            "detailed": "http://content7.flixster.com/movie/11/16/41/11164165_det.jpg",
+            "original": "http://content7.flixster.com/movie/11/16/41/11164165_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Robert Pattinson",
+                "id": "770677984",
+                "characters": [
+                    "Eric Packer"
+                ]
+            },
+            {
+                "name": "Samantha Morton",
+                "id": "162655611",
+                "characters": [
+                    "Vija Kinski"
+                ]
+            },
+            {
+                "name": "Juliette Binoche",
+                "id": "162655186",
+                "characters": [
+                    "Didi Fancher"
+                ]
+            },
+            {
+                "name": "Paul Giamatti",
+                "id": "162683649",
+                "characters": [
+                    "Benno Levin"
+                ]
+            },
+            {
+                "name": "Sarah Gadon",
+                "id": "241691073",
+                "characters": [
+                    "Elise Shiffrin",
+                    "Elise Shifrin"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1480656"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771225278.json",
+            "alternate": "http://www.rottentomatoes.com/m/cosmopolis/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771225278/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771225278/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771225278/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771225278/similar.json"
+        },
+        "trailer": "qOw-YEMmsbI",
+        "poster_path": "/6jzRdPFHxmdC1Hp3tNZ9GuVpwLF.jpg",
+        "backdrop_path": "/ki7xrOPMcFp98TTY87NO0MTrpEw.jpg"
+    },
+    {
+        "id": "771186945",
+        "title": "Looper",
+        "year": 2012,
+        "mpaa_rating": "R",
+        "runtime": 119,
+        "critics_consensus": "As thought-provoking as it is thrilling, Looper delivers an uncommonly smart, bravely original blend of futuristic sci-fi and good old-fashioned action.",
+        "release_dates": {
+            "theater": "2012-09-28",
+            "dvd": "2012-12-31"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 94,
+            "audience_rating": "Upright",
+            "audience_score": 87
+        },
+        "synopsis": "In the futuristic action thriller Looper, time travel will be invented - but it will be illegal and only available on the black market. When the mob wants to get rid of someone, they will send their target 30 years into the past, where a \"looper\" - a hired gun, like Joe (Joseph Gordon-Levitt) - is waiting to mop up. Joe is getting rich and life is good... until the day the mob decides to \"close the loop,\" sending back Joe's future self (Bruce Willis) for assassination. -- (C) Sony",
+        "posters": {
+            "thumbnail": "http://content6.flixster.com/movie/11/16/81/11168184_mob.jpg",
+            "profile": "http://content6.flixster.com/movie/11/16/81/11168184_pro.jpg",
+            "detailed": "http://content6.flixster.com/movie/11/16/81/11168184_det.jpg",
+            "original": "http://content6.flixster.com/movie/11/16/81/11168184_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Bruce Willis",
+                "id": "162652509",
+                "characters": [
+                    "Joe",
+                    "Old Joe"
+                ]
+            },
+            {
+                "name": "Joseph Gordon-Levitt",
+                "id": "162666960",
+                "characters": [
+                    "Joe"
+                ]
+            },
+            {
+                "name": "Emily Blunt",
+                "id": "162685827",
+                "characters": [
+                    "Sara"
+                ]
+            },
+            {
+                "name": "Paul Dano",
+                "id": "303713360",
+                "characters": [
+                    "Seth"
+                ]
+            },
+            {
+                "name": "Noah Segan",
+                "id": "326299031",
+                "characters": [
+                    "Kid Blue"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1276104"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771186945.json",
+            "alternate": "http://www.rottentomatoes.com/m/looper/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771186945/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771186945/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771186945/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771186945/similar.json"
+        },
+        "trailer": "0uIWGOKW5OM",
+        "poster_path": "/g9FW5mfDN26sNjOcDPB5mIGe8jv.jpg",
+        "backdrop_path": "/vuHG8VlYnvw4gUKtS7GY5kZol69.jpg"
+    },
+    {
+        "id": "771266128",
+        "title": "The Words",
+        "year": 2012,
+        "mpaa_rating": "PG-13",
+        "runtime": 96,
+        "critics_consensus": "Neither as clever nor as interesting as it appears to think it is, The Words maroons its talented stars in an overly complex, dramatically inert literary thriller that's ultimately a poor substitute for a good book.",
+        "release_dates": {
+            "theater": "2012-09-07",
+            "dvd": "2012-12-24"
+        },
+        "ratings": {
+            "critics_rating": "Rotten",
+            "critics_score": 22,
+            "audience_rating": "Spilled",
+            "audience_score": 51
+        },
+        "synopsis": "Starring Bradley Cooper, Jeremy Irons, Dennis Quaid, Olivia Wilde and Zoe Saldana, the layered romantic drama The Words follows young writer Rory Jansen who finally achieves long sought after literary success after publishing the next great American novel. There's only one catch - he didn't write it. As the past comes back to haunt him and his literary star continues to rise, Jansen is forced to confront the steep price that must be paid for stealing another man's work, and for placing ambition and success above life's most fundamental three words. -- (C) CBS Films",
+        "posters": {
+            "thumbnail": "http://content6.flixster.com/movie/11/16/81/11168144_mob.jpg",
+            "profile": "http://content6.flixster.com/movie/11/16/81/11168144_pro.jpg",
+            "detailed": "http://content6.flixster.com/movie/11/16/81/11168144_det.jpg",
+            "original": "http://content6.flixster.com/movie/11/16/81/11168144_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Bradley Cooper",
+                "id": "351525448",
+                "characters": [
+                    "Rory Jansen"
+                ]
+            },
+            {
+                "name": "Jeremy Irons",
+                "id": "162652244",
+                "characters": [
+                    "The Old Man"
+                ]
+            },
+            {
+                "name": "Dennis Quaid",
+                "id": "162655527",
+                "characters": [
+                    "Clay Hammond"
+                ]
+            },
+            {
+                "name": "Olivia Wilde",
+                "id": "326299741",
+                "characters": [
+                    "Daniella",
+                    "Danielle"
+                ]
+            },
+            {
+                "name": "Zoe Saldana",
+                "id": "162660050",
+                "characters": [
+                    "Dora Jansen"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1840417"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771266128.json",
+            "alternate": "http://www.rottentomatoes.com/m/the_words/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771266128/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771266128/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771266128/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771266128/similar.json"
+        },
+        "trailer": "gjmrDDD9o_k",
+        "poster_path": "/iNDSm5wcdmtfKsMM7nE8XhJUBl7.jpg",
+        "backdrop_path": "/tH5oFO4L3NblqiOaOb70G9AbGtB.jpg"
+    },
+    {
+        "id": "771235030",
+        "title": "Resident Evil: Retribution",
+        "year": 2012,
+        "mpaa_rating": "R",
+        "runtime": 95,
+        "critics_consensus": "Another predictable entry in the Resident Evil franchise that seems to get more cynical and lazy with each film.",
+        "release_dates": {
+            "theater": "2012-09-14",
+            "dvd": "2012-12-21"
+        },
+        "ratings": {
+            "critics_rating": "Rotten",
+            "critics_score": 31,
+            "audience_rating": "Spilled",
+            "audience_score": 51
+        },
+        "synopsis": "The Umbrella Corporation's deadly T-virus continues to ravage the Earth, transforming the global population into legions of the flesh eating Undead. The human race's last and only hope, Alice (Milla Jovovich), awakens in the heart of Umbrella's most clandestine operations facility and unveils more of her mysterious past as she delves further into the complex. Without a safe haven, Alice continues to hunt those responsible for the outbreak; a chase that takes her from Tokyo to New York, Washington, D.C. and Moscow, culminating in a mind-blowing revelation that will force her to rethink everything that she once thought to be true. Aided by newfound allies and familiar friends, Alice must fight to survive long enough to escape a hostile world on the brink of oblivion. The countdown has begun. -- (C) Sony",
+        "posters": {
+            "thumbnail": "http://content8.flixster.com/movie/11/16/80/11168062_mob.jpg",
+            "profile": "http://content8.flixster.com/movie/11/16/80/11168062_pro.jpg",
+            "detailed": "http://content8.flixster.com/movie/11/16/80/11168062_det.jpg",
+            "original": "http://content8.flixster.com/movie/11/16/80/11168062_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Milla Jovovich",
+                "id": "162664693",
+                "characters": [
+                    "Alice"
+                ]
+            },
+            {
+                "name": "Sienna Guillory",
+                "id": "162686458",
+                "characters": [
+                    "Jill Valentine"
+                ]
+            },
+            {
+                "name": "Colin Salmon",
+                "id": "417267409",
+                "characters": [
+                    "One"
+                ]
+            },
+            {
+                "name": "Michelle Rodriguez",
+                "id": "162668831",
+                "characters": [
+                    "Rain"
+                ]
+            },
+            {
+                "name": "Kevin Durand",
+                "id": "684288210",
+                "characters": [
+                    "Barry Burton"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1855325"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771235030.json",
+            "alternate": "http://www.rottentomatoes.com/m/resident_evil_retribution/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771235030/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771235030/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771235030/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771235030/similar.json"
+        },
+        "trailer": "Gj1iJG9G5FA",
+        "poster_path": "/aCHl9hRxYLrxwNU4YU4lCAgJQ9A.jpg",
+        "backdrop_path": "/wbOMo0djlYR62PMSrjOOozLBeUD.jpg"
+    },
+    {
+        "id": "771205854",
+        "title": "Premium Rush",
+        "year": 2012,
+        "mpaa_rating": "PG-13",
+        "runtime": 90,
+        "critics_consensus": "It's built out of familiar parts, but no matter how formulaic Premium Rush's storyline might seem, it's elevated by high-octane action and enjoyable performances.",
+        "release_dates": {
+            "theater": "2012-08-24",
+            "dvd": "2012-12-21"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 76,
+            "audience_rating": "Upright",
+            "audience_score": 63
+        },
+        "synopsis": "Dodging speeding cars, crazed cabbies, open doors, and eight million cranky pedestrians is all in a day's work for Wilee (Joseph Gordon-Levitt), the best of New York's agile and aggressive bicycle messengers. It takes a special breed to ride the fixie - super lightweight, single-gear bikes with no brakes and riders who are equal part skilled cyclists and suicidal nutcases who risk becoming a smear on the pavement every time they head into traffic. But a guy who's used to putting his life on the line is about to get more than even he is used to when a routine delivery turns into a life or death chase through the streets of Manhattan. When Wilee picks up his last envelope of the day on a premium rush run, he discovers this package is different. This time, someone is actually trying to kill him. -- (C) Sony",
+        "posters": {
+            "thumbnail": "http://content9.flixster.com/movie/11/16/80/11168079_mob.jpg",
+            "profile": "http://content9.flixster.com/movie/11/16/80/11168079_pro.jpg",
+            "detailed": "http://content9.flixster.com/movie/11/16/80/11168079_det.jpg",
+            "original": "http://content9.flixster.com/movie/11/16/80/11168079_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Joseph Gordon-Levitt",
+                "id": "162666960",
+                "characters": [
+                    "Wilee"
+                ]
+            },
+            {
+                "name": "Michael Shannon",
+                "id": "368451324",
+                "characters": [
+                    "Bobby Monday"
+                ]
+            },
+            {
+                "name": "Dania Ramirez",
+                "id": "729680355",
+                "characters": [
+                    "Vanessa"
+                ]
+            },
+            {
+                "name": "Jamie Chung",
+                "id": "770694653",
+                "characters": [
+                    "Nima"
+                ]
+            },
+            {
+                "name": "Lauren Ashley Carter",
+                "id": "770910792",
+                "characters": [
+                    "Phoebe"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1547234"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771205854.json",
+            "alternate": "http://www.rottentomatoes.com/m/premium_rush/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771205854/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771205854/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771205854/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771205854/similar.json"
+        },
+        "trailer": "W_s9EvacnVc",
+        "poster_path": "/khfyc8Yeub0JvD9kk29vqYsPsIi.jpg",
+        "backdrop_path": "/Yavh2wmlZKFcqT4VIr2i4OZ4lZ.jpg"
+    },
+    {
+        "id": "771210952",
+        "title": "Killer Joe",
+        "year": 2012,
+        "mpaa_rating": "R",
+        "runtime": 102,
+        "critics_consensus": "Violent, darkly comic, and full of strong performances, Killer Joe proves William Friedkin hasn't lost his touch, even if the plot may be too lurid for some.",
+        "release_dates": {
+            "theater": "2012-07-27",
+            "dvd": "2012-12-21"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 77,
+            "audience_rating": "Upright",
+            "audience_score": 66
+        },
+        "synopsis": "When 22 year-old drug dealer Chris (Hirsch) has his stash of drugs stolen from him by his mother, he has to come up with six-thousand dollars quick, or he's dead. Desperate, he goes to the trailer-park to see his father, Ansel (Hayden Church), and he lays out the plan. Chris's mother, who everyone hates, has a life insurance policy that would clear up his debt and make them all rich. The problem is that Chris' mother is very much alive. Enter Detective \"Killer\" Joe Cooper, a hired hit man with the manners of a Southern gentleman, who will do the job - for an upfront fee, that Chris and Ansel can't pay. Just as Joe is about to leave, he spots Dottie (Temple), Chris' innocent younger sister. Joe makes Chris an offer, he'll keep Dottie as sexual collateral until the money is collected and his fee can be paid. -- (C) Voltage Pictures",
+        "posters": {
+            "thumbnail": "http://content7.flixster.com/movie/11/16/59/11165993_mob.jpg",
+            "profile": "http://content7.flixster.com/movie/11/16/59/11165993_pro.jpg",
+            "detailed": "http://content7.flixster.com/movie/11/16/59/11165993_det.jpg",
+            "original": "http://content7.flixster.com/movie/11/16/59/11165993_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Matthew McConaughey",
+                "id": "162652350",
+                "characters": [
+                    "\"Killer\" Joe Cooper",
+                    "Joe Cooper"
+                ]
+            },
+            {
+                "name": "Emile Hirsch",
+                "id": "162652589",
+                "characters": [
+                    "Chris",
+                    "Chris Smith"
+                ]
+            },
+            {
+                "name": "Juno Temple",
+                "id": "770696465",
+                "characters": [
+                    "Dottie",
+                    "Dottie Smith"
+                ]
+            },
+            {
+                "name": "Thomas Haden Church",
+                "id": "162683650",
+                "characters": [
+                    "Ansel",
+                    "Ansel Smith"
+                ]
+            },
+            {
+                "name": "Gina Gershon",
+                "id": "162687242",
+                "characters": [
+                    "Sharla",
+                    "Sharla Smith"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1726669"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771210952.json",
+            "alternate": "http://www.rottentomatoes.com/m/killer_joe/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771210952/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771210952/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771210952/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771210952/similar.json"
+        },
+        "trailer": "YqMYU7NytUY",
+        "poster_path": "/6EBhU4BHWdx5UM0o1PrIZAYcH3q.jpg",
+        "backdrop_path": "/ynZpOFq3j7A6sD9WLctfMLaKuX3.jpg"
+    },
+    {
+        "id": "771266208",
+        "title": "Arbitrage",
+        "year": 2012,
+        "mpaa_rating": "R",
+        "runtime": 107,
+        "critics_consensus": "Arbitrage is both a tense thriller and a penetrating character study, elevated by the strength of a typically assured performance from Richard Gere.",
+        "release_dates": {
+            "theater": "2012-09-14",
+            "dvd": "2012-12-21"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 85,
+            "audience_rating": "Upright",
+            "audience_score": 67
+        },
+        "synopsis": "When we first meet New York hedge-fund magnate Robert Miller (Richard Gere) on the eve of his 60th birthday, he appears the very portrait of success in American business and family life. But behind the gilded walls of his mansion, Miller is in over his head, desperately trying to complete the sale of his trading empire to a major bank before the depths of his fraud are revealed. Struggling to conceal his duplicity from loyal wife Ellen (Susan Sarandon) and brilliant daughter and heir-apparent Brooke (Brit Marling), Miller's also balancing an affair with French art-dealer Julie Cote (Laetetia Casta). Just as he's about to unload his troubled empire, an unexpected bloody error forces him to juggle family, business, and crime with the aid of Jimmy Grant (Nate Parker), a face from Miller's past. -- (C) Official Site",
+        "posters": {
+            "thumbnail": "http://content8.flixster.com/movie/11/16/57/11165790_mob.jpg",
+            "profile": "http://content8.flixster.com/movie/11/16/57/11165790_pro.jpg",
+            "detailed": "http://content8.flixster.com/movie/11/16/57/11165790_det.jpg",
+            "original": "http://content8.flixster.com/movie/11/16/57/11165790_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Richard Gere",
+                "id": "162655185",
+                "characters": [
+                    "Robert Miller"
+                ]
+            },
+            {
+                "name": "Susan Sarandon",
+                "id": "162654579",
+                "characters": [
+                    "Ellen Miller"
+                ]
+            },
+            {
+                "name": "Tim Roth",
+                "id": "162652856",
+                "characters": [
+                    "Detective Michael Bryer"
+                ]
+            },
+            {
+                "name": "Brit Marling",
+                "id": "770798848",
+                "characters": [
+                    "Brooke Miller"
+                ]
+            },
+            {
+                "name": "Nate Parker",
+                "id": "770693654",
+                "characters": [
+                    "Jimmy Grant"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1764183"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771266208.json",
+            "alternate": "http://www.rottentomatoes.com/m/arbitrage/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771266208/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771266208/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771266208/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771266208/similar.json"
+        },
+        "trailer": "fig6Eze0uGM",
+        "poster_path": "/tn8a9qdYmUF8NMy1tmhoH4WnDXq.jpg",
+        "backdrop_path": "/4yr7WC1qRoWBZa1QvS5YBz1aEGT.jpg"
+    },
+    {
+        "id": "771268582",
+        "title": "Trouble with the Curve",
+        "year": 2012,
+        "mpaa_rating": "PG-13",
+        "runtime": 110,
+        "critics_consensus": "Though predictable and somewhat dramatically underwhelming, Trouble with the Curve benefits from Clint Eastwood's grizzled charisma and his easy chemistry with a charming Amy Adams.",
+        "release_dates": {
+            "theater": "2012-09-21",
+            "dvd": "2012-12-21"
+        },
+        "ratings": {
+            "critics_rating": "Rotten",
+            "critics_score": 51,
+            "audience_rating": "Upright",
+            "audience_score": 66
+        },
+        "synopsis": "Gus Lobel (Clint Eastwood) has been one of the best scouts in baseball for decades, but, despite his efforts to hide it, age is starting to catch up with him. Nevertheless, Gus-who can tell a pitch just by the crack of the bat-refuses to be benched for what may be the final innings of his career. He may not have a choice. The front office of the Atlanta Braves is starting to question his judgment, especially with the country's hottest batting phenom on deck for the draft. The one person who might be able to help is also the one person Gus would never ask: his daughter, Mickey (Amy Adams), an associate at a high-powered Atlanta law firm whose drive and ambition has put her on the fast track to becoming partner. Against her better judgment, and over Gus's objections, Mickey joins him on his latest scouting trip to North Carolina, jeopardizing her own career to save his. -- (C) Warner Bros.",
+        "posters": {
+            "thumbnail": "http://content9.flixster.com/movie/11/16/74/11167431_mob.jpg",
+            "profile": "http://content9.flixster.com/movie/11/16/74/11167431_pro.jpg",
+            "detailed": "http://content9.flixster.com/movie/11/16/74/11167431_det.jpg",
+            "original": "http://content9.flixster.com/movie/11/16/74/11167431_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Clint Eastwood",
+                "id": "162659169",
+                "characters": [
+                    "Gus",
+                    "Gus Lobel"
+                ]
+            },
+            {
+                "name": "Amy Adams",
+                "id": "162653029",
+                "characters": [
+                    "Mickey"
+                ]
+            },
+            {
+                "name": "Justin Timberlake",
+                "id": "246212645",
+                "characters": [
+                    "Johnny",
+                    "Johnny Flanagan"
+                ]
+            },
+            {
+                "name": "John Goodman",
+                "id": "162655706",
+                "characters": [
+                    "Pete Klein"
+                ]
+            },
+            {
+                "name": "Robert Patrick",
+                "id": "162655397",
+                "characters": [
+                    "Vince"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "2083383"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771268582.json",
+            "alternate": "http://www.rottentomatoes.com/m/trouble_with_the_curve/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771268582/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771268582/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771268582/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771268582/similar.json"
+        },
+        "trailer": "UdJPvXLemVs",
+        "poster_path": "/vNWFhlTseaTupYmpnXxJLoShJe3.jpg",
+        "backdrop_path": "/im4OBKZLktKaD4FKfV62z7k7pLW.jpg"
+    },
+    {
+        "id": "771190127",
+        "title": "Total Recall",
+        "year": 2012,
+        "mpaa_rating": "PG-13",
+        "runtime": 121,
+        "critics_consensus": "While it boasts some impressive action sequences, Total Recall lacks the intricate plotting, wry humor, and fleshed out characters that made the original a sci-fi classic.",
+        "release_dates": {
+            "theater": "2012-08-03",
+            "dvd": "2012-12-18"
+        },
+        "ratings": {
+            "critics_rating": "Rotten",
+            "critics_score": 31,
+            "audience_rating": "Spilled",
+            "audience_score": 46
+        },
+        "synopsis": "Welcome to Rekall, the company that can turn your dreams into real memories. For a factory worker named Douglas Quaid (Colin Farrell), even though he's got a beautiful wife (Kate Beckinsale) who he loves, the mind-trip sounds like the perfect vacation from his frustrating life - real memories of life as a super-spy might be just what he needs. But when the procedure goes horribly wrong, Quaid becomes a hunted man. Finding himself on the run from the police - controlled by Chancellor Cohaagen (Bryan Cranston), the leader of the free world - Quaid teams up with a rebel fighter (Jessica Biel) to find the head of the underground resistance (Bill Nighy) and stop Cohaagen. -- (C) Sony",
+        "posters": {
+            "thumbnail": "http://content9.flixster.com/movie/11/16/79/11167963_mob.jpg",
+            "profile": "http://content9.flixster.com/movie/11/16/79/11167963_pro.jpg",
+            "detailed": "http://content9.flixster.com/movie/11/16/79/11167963_det.jpg",
+            "original": "http://content9.flixster.com/movie/11/16/79/11167963_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Colin Farrell",
+                "id": "162665297",
+                "characters": [
+                    "Douglas Quaid",
+                    "Douglas Quaid/Hauser"
+                ]
+            },
+            {
+                "name": "Kate Beckinsale",
+                "id": "162659163",
+                "characters": [
+                    "Lori Quaid"
+                ]
+            },
+            {
+                "name": "Bryan Cranston",
+                "id": "326392501",
+                "characters": [
+                    "Cohaagen",
+                    "Vilos Cohaagen"
+                ]
+            },
+            {
+                "name": "Jessica Biel",
+                "id": "162652974",
+                "characters": [
+                    "Melina"
+                ]
+            },
+            {
+                "name": "Bill Nighy",
+                "id": "162652300",
+                "characters": [
+                    "Kuato",
+                    "Matthias",
+                    "Quatto"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1386703"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771190127.json",
+            "alternate": "http://www.rottentomatoes.com/m/total_recall_2012/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771190127/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771190127/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771190127/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771190127/similar.json"
+        },
+        "trailer": "BFUsSNdkwi8",
+        "poster_path": "/tWBo7aZk3I1dLxmMj7ZJcN8uke5.jpg",
+        "backdrop_path": "/yRaCI0pjb1FGgagYXjg7dV4lkJJ.jpg"
+    },
+    {
+        "id": "771308226",
+        "title": "Pitch Perfect",
+        "year": 2012,
+        "mpaa_rating": "PG-13",
+        "runtime": 112,
+        "critics_consensus": "Pitch Perfect's plot is formulaic, but the performances are excellent and the musical numbers are toe-tapping as well.",
+        "release_dates": {
+            "theater": "2012-10-05",
+            "dvd": "2012-12-18"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 80,
+            "audience_rating": "Upright",
+            "audience_score": 83
+        },
+        "synopsis": "Beca (Anna Kendrick) is that girl who'd rather listen to what's coming out of her headphones than what's coming out of you. Arriving at her new college, she finds herself not right for any clique but somehow is muscled into one that she never would have picked on her own: alongside mean girls, sweet girls and weird girls whose only thing in common is how good they sound when they sing together, in the new out-loud comedy Pitch Perfect. When Beca takes this acoustic singing group out of their world of traditional arrangements and perfect harmonies into all-new mash-ups, they fight to climb their way to the top of the cutthroat world of college a cappella. This could wind up either the coolest thing they'll ever do or the most insane, and it will probably be a little of both. -- (C) Universal",
+        "posters": {
+            "thumbnail": "http://content6.flixster.com/movie/11/16/75/11167512_mob.jpg",
+            "profile": "http://content6.flixster.com/movie/11/16/75/11167512_pro.jpg",
+            "detailed": "http://content6.flixster.com/movie/11/16/75/11167512_det.jpg",
+            "original": "http://content6.flixster.com/movie/11/16/75/11167512_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Anna Kendrick",
+                "id": "528367112",
+                "characters": [
+                    "Beca"
+                ]
+            },
+            {
+                "name": "Skylar Astin",
+                "id": "770797712",
+                "characters": [
+                    "Jesse"
+                ]
+            },
+            {
+                "name": "Brittany Snow",
+                "id": "162652474",
+                "characters": [
+                    "Chloe"
+                ]
+            },
+            {
+                "name": "Anna Camp",
+                "id": "770908299",
+                "characters": [
+                    "Aubrey"
+                ]
+            },
+            {
+                "name": "Ben Platt",
+                "id": "771422025",
+                "characters": [
+                    "Benji"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "1981677"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771308226.json",
+            "alternate": "http://www.rottentomatoes.com/m/pitch_perfect/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771308226/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771308226/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771308226/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771308226/similar.json"
+        },
+        "trailer": "m2UFx3UIEgA",
+        "poster_path": "/b2dQHjDSsK1CczDSNQx9FrT7OKY.jpg",
+        "backdrop_path": "/vcLqVuSMx7dVfuOVKd4IL4RcMsa.jpg"
+    },
+    {
+        "id": "771251499",
+        "title": "Diary of a Wimpy Kid: Dog Days",
+        "year": 2012,
+        "mpaa_rating": "PG",
+        "runtime": 94,
+        "critics_consensus": "Overly familiar and a bit too reliant on slapstick, the sitcom-like Dog Days fails to improve upon previous installments and will likely appeal to few outside its target audience.",
+        "release_dates": {
+            "theater": "2012-08-03",
+            "dvd": "2012-12-18"
+        },
+        "ratings": {
+            "critics_rating": "Rotten",
+            "critics_score": 50,
+            "audience_rating": "Upright",
+            "audience_score": 66
+        },
+        "synopsis": "During his summer vacation, \"Wimpy Kid\" Greg Heffley, the hero of the phenomenally successful book series, hatches a plan to pretend he has a job at a ritzy country club - which fails to keep him away from the season's dog days, including embarrassing mishaps at a public pool and a camping trip that goes horribly wrong. -- (C) 20th Century Fox",
+        "posters": {
+            "thumbnail": "http://content8.flixster.com/movie/11/16/79/11167902_mob.jpg",
+            "profile": "http://content8.flixster.com/movie/11/16/79/11167902_pro.jpg",
+            "detailed": "http://content8.flixster.com/movie/11/16/79/11167902_det.jpg",
+            "original": "http://content8.flixster.com/movie/11/16/79/11167902_ori.jpg"
+        },
+        "abridged_cast": [
+            {
+                "name": "Zachary Gordon",
+                "id": "770802329",
+                "characters": [
+                    "Greg Heffley"
+                ]
+            },
+            {
+                "name": "Devon Bostick",
+                "id": "770688857",
+                "characters": [
+                    "Rodrick Heffley"
+                ]
+            },
+            {
+                "name": "Rachael Harris",
+                "id": "770781992",
+                "characters": [
+                    "Susan Heffley"
+                ]
+            },
+            {
+                "name": "Robert Capron",
+                "id": "770912037",
+                "characters": [
+                    "Rowley Jefferson"
+                ]
+            },
+            {
+                "name": "Steve Zahn",
+                "id": "162652352",
+                "characters": [
+                    "Frank Heffley"
+                ]
+            }
+        ],
+        "alternate_ids": {
+            "imdb": "2023453"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/771251499.json",
+            "alternate": "http://www.rottentomatoes.com/m/diary_of_a_wimpy_kid_dog_days/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/771251499/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/771251499/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/771251499/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/771251499/similar.json"
+        },
+        "trailer": "KUiFUELaWpo",
+        "poster_path": "/7Vurwe3RbOnKxqoi32meZ0GieTA.jpg",
+        "backdrop_path": "/xLkOXfVcBVDM3nDZteVsMRh4lFN.jpg"
+    }
+]
