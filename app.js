@@ -121,6 +121,7 @@ function updateJson(){
         }
   });
 
+
   // get conf file for tmdb this is needed to build the full URL from images
   $.ajax({
     url: 'http://api.themoviedb.org/3/configuration?api_key='+apiKeys.keys.themoviedb 
