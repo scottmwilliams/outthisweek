@@ -3,7 +3,7 @@
 $(document).ready(function(){
   var mbdConfig
   , date = getReleaseWeek()
-  , configURL = 'json/'+ date +'/mdbConfig.json'
+  , configURL = '/public/json/mdbConfig.json'
   , movieCollectionURL = 'json/'+ date +'/movies.json';
 
   //////// backbone routes ////////

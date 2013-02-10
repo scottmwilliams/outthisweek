@@ -125,7 +125,7 @@ function updateJson(){
   $.ajax({
     url: 'http://api.themoviedb.org/3/configuration?api_key='+apiKeys.keys.themoviedb 
   }).success(function(data){
-    fs.writeFile(path+'/'+'mdbConfig.json', JSON.stringify(data, null, 4));
+    fs.writeFile('/public/json/mdbConfig.json', JSON.stringify(data, null, 4));
   });
 }
 
