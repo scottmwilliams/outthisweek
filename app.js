@@ -53,7 +53,7 @@ console.log("Make sure you change your api keys in node_modules/apikeys/index.js
 
 /////////  START OF GETTING RECENT FILMS FROM MDB ////////////
 var job = new cronJob({
-  cronTime: '0 0 * * *',
+  cronTime: '5 0 * * 0',
   onTick: function() {
     updateJson();
   },
