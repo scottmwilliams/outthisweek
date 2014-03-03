@@ -112,7 +112,7 @@ function updateJson(){
                             movieObj.trailer = data.items[0].id.videoId;
                             
                             /* THE PROBLEM IS HERE */
-                             console.log(movie);
+//                             console.log(movie);
                             movieObj.poster_path = movie.results[0].poster_path;
                             movieObj.backdrop_path = movie.results[0].backdrop_path;
                             tmdbCollection.push(movieObj);
@@ -131,7 +131,8 @@ function updateJson(){
                     }); // end ajax call
                 }
                 else{
-                  writeToFile();
+                console.log('Im writing the file'); 
+		 writeToFile();
                 }
         }
   });
@@ -150,7 +151,8 @@ function updateJson(){
 
 // when all the ajax requests are finished write the new movies collection to disk
 function writeToFile(){
-    fs.writeFile(path+'/'+'movies.json', JSON.stringify(tmdbCollection, null, 4));
+	console.log('writing to the file');
+	fs.writeFile(path+'/'+'movies.json', JSON.stringify(tmdbCollection, null, 4));
 }
 
 
