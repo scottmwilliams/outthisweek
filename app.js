@@ -53,15 +53,15 @@ console.log("Make sure you change your api keys in node_modules/apikeys/index.js
 
 /////////  START OF GETTING RECENT FILMS FROM MDB ////////////
 var job = new cronJob({
-  cronTime: '5 0 * * 0',
+  cronTime: '0 5 * * 0',
   onTick: function() {
+    console.log('cron has run');
     updateJson();
   },
   start: false
 });
 job.start();
 
-updateJson();
 
 var tmdbCollection = [];
 var tmdbCollectionFullDetails = [];
@@ -126,7 +126,7 @@ function updateJson(){
                         });
                       },
                       error:function(error){
-                        console.log(error);
+                        console.log('Error on the google callback' + error);
                       }
                     }); // end ajax call
                 }
@@ -138,13 +138,13 @@ function updateJson(){
   });
 
 
-  // get conf file for tmdb this is needed to build the full URL from images
+  /// get conf file for tmdb this is needed to build the full URL from images
   $.ajax({
     url: 'http://api.themoviedb.org/3/configuration?api_key='+apiKeys.keys.themoviedb 
   }).success(function(data){
     //console.log(data);
     fs.writeFile('public/json/mdbConfig.json', JSON.stringify(data, null, 4), function(err){
-         console.log('error'+err);
+         console.log('error getting themoviedb config ' + err);
     });
   });
 }
