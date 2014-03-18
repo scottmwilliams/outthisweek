@@ -61,12 +61,13 @@ var job = new cronJob({
   start: false
 });
 job.start();
-
+updateJson();
 
 var tmdbCollection = [];
 var tmdbCollectionFullDetails = [];
 var date = getReleaseWeek();
-var path = 'public/json/'+date;
+//var path = 'public/json/'+date;
+var path = 'public/json/';
 var tomatoesRecent;
 
 

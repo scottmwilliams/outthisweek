@@ -4,7 +4,8 @@ $(document).ready(function(){
   var mbdConfig
   , date = getReleaseWeek()
   , configURL = '/json/mdbConfig.json'
-  , movieCollectionURL = 'json/'+ date +'/movies.json';
+ // , movieCollectionURL = 'json/'+ date +'/movies.json';
+  , movieCollectionURL = 'json/movies.json';
 
   //////// backbone routes ////////
 
