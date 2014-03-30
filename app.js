@@ -67,7 +67,7 @@ var tmdbCollection = [];
 var tmdbCollectionFullDetails = [];
 var date = getReleaseWeek();
 //var path = 'public/json/'+date;
-var path = 'public/json/';
+var path = 'public/json';
 var tomatoesRecent;
 
 
